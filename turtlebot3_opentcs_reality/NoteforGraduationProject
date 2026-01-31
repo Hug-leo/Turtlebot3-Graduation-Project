@@ -1,0 +1,79 @@
+
+// Ket noi wifi
+ssh-keygen -f "/home/dinhsieu/.ssh/known_hosts" -R "192.168.1.160"
+
+
+// Cau lenh ket noi wifi
+ nmap -sn 192.168.1.0/24
+ ping 192.168.1.xxxxxx
+ ssh dinhsieu@192.168.1.xxxxxx
+ 
+
+// Cau lenh chay lidar
+ros2 launch hls_lfcd_lds_driver hlds_laser.launch.py
+
+
+//Cau lenh chay STM32
+cd ~/Documents/PlatformIO/Projects/DATN_HK252
+
+Build CT STM32
+pio run
+
+Load CT STM32
+pio run -t upload
+
+
+//Chạy node opentcs_client_node.py 
+cd ~/ros2_ws
+source install/setup.bash
+ros2 run opentcs_client_py opentcs_client_node
+
+
+//Link github for Lidar 
+https://github.com/ROBOTIS-GIT/hls_lfcd_lds_driver/tree/main/.github/workflows
+
+
+//lenh ban phim dieu khien
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
+
+//Bat cam bien Lidar
+sudo chmod 666 /dev/ttyUSB0
+ros2 launch hls_lfcd_lds_driver hlds_laser.launch.py
+
+
+//Lấy file ảnh:
+scp dinhsieu@192.168.1.168:/home/dinhsieu/map_final.pgm . (thay doi dia chi IP)
+
+// Lấy file thông số:
+scp dinhsieu@192.168.1.168:/home/dinhsieu/map_final.yaml .  (thay doi dia chi IP)
+
+
+
+
+//Cac buoc Mapping
+
+
++ Cửa sổ 1: Bật LiDAR
+sudo chmod 666 /dev/ttyUSB0
+ros2 launch hls_lfcd_lds_driver hlds_laser.launch.py
+
++ Cửa sổ 2: Bật Động cơ & Odom
+python3 robot_control_tf.py
+
+
++Cửa sổ 3: Bật Khung xe (TF)
+ros2 run tf2_ros static_transform_publisher 0 0 0.1 0 0 0 base_link laser
+
++ Cửa sổ thứ 4: Chay slam toolbox 
+ros2 launch nav2_bringup bringup_launch.py use_sim_time:=False map:=/home/dinhsieu/map_final.yaml
+
+
+// CHay tren PC
+ros2 run rviz2 rviz2
+
+// Luu map tren Pi
+ros2 run nav2_map_server map_saver_cli -f map_final --ros-args -p save_map_timeout:=10000.0
+
+// Kiem tra 
+ls -lh map_final*
+

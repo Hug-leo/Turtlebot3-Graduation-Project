@@ -1,0 +1,37 @@
+[0.019s] Invoking command in '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_fake_node': CMAKE_PREFIX_PATH=/home/hug/opentcs_ws/install/opentcs_ros2:/opt/ros/humble /usr/bin/cmake --build /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_fake_node -- -j16 -l16
+[0.062s] [ 50%] [32mBuilding CXX object CMakeFiles/turtlebot3_fake_node.dir/src/turtlebot3_fake_node.cpp.o[0m
+[8.108s] [100%] [32m[1mLinking CXX executable turtlebot3_fake_node[0m
+[8.840s] [100%] Built target turtlebot3_fake_node
+[8.855s] Invoked command in '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_fake_node' returned '0': CMAKE_PREFIX_PATH=/home/hug/opentcs_ws/install/opentcs_ros2:/opt/ros/humble /usr/bin/cmake --build /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_fake_node -- -j16 -l16
+[8.857s] Invoking command in '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_fake_node': CMAKE_PREFIX_PATH=/home/hug/opentcs_ws/install/opentcs_ros2:/opt/ros/humble /usr/bin/cmake --install /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_fake_node
+[8.867s] -- Install configuration: ""
+[8.867s] -- Installing: /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/lib/turtlebot3_fake_node/turtlebot3_fake_node
+[8.872s] -- Set runtime path of "/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/lib/turtlebot3_fake_node/turtlebot3_fake_node" to ""
+[8.873s] -- Installing: /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/share/turtlebot3_fake_node/launch
+[8.873s] -- Installing: /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/share/turtlebot3_fake_node/launch/rviz2.launch.py
+[8.873s] -- Installing: /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/share/turtlebot3_fake_node/launch/turtlebot3_fake_node.launch.py
+[8.873s] -- Installing: /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/share/turtlebot3_fake_node/param
+[8.873s] -- Installing: /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/share/turtlebot3_fake_node/param/waffle.yaml
+[8.873s] -- Installing: /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/share/turtlebot3_fake_node/param/burger.yaml
+[8.873s] -- Installing: /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/share/turtlebot3_fake_node/param/waffle_pi.yaml
+[8.873s] -- Installing: /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/include/
+[8.874s] -- Installing: /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/include//turtlebot3_fake_node
+[8.874s] -- Installing: /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/include//turtlebot3_fake_node/turtlebot3_fake_node.hpp
+[8.874s] -- Installing: /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/share/ament_index/resource_index/package_run_dependencies/turtlebot3_fake_node
+[8.874s] -- Installing: /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/share/ament_index/resource_index/parent_prefix_path/turtlebot3_fake_node
+[8.874s] -- Installing: /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/share/turtlebot3_fake_node/environment/ament_prefix_path.sh
+[8.874s] -- Installing: /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/share/turtlebot3_fake_node/environment/ament_prefix_path.dsv
+[8.874s] -- Installing: /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/share/turtlebot3_fake_node/environment/path.sh
+[8.874s] -- Installing: /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/share/turtlebot3_fake_node/environment/path.dsv
+[8.874s] -- Installing: /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/share/turtlebot3_fake_node/local_setup.bash
+[8.874s] -- Installing: /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/share/turtlebot3_fake_node/local_setup.sh
+[8.874s] -- Installing: /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/share/turtlebot3_fake_node/local_setup.zsh
+[8.875s] -- Installing: /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/share/turtlebot3_fake_node/local_setup.dsv
+[8.875s] -- Installing: /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/share/turtlebot3_fake_node/package.dsv
+[8.875s] -- Installing: /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/share/ament_index/resource_index/packages/turtlebot3_fake_node
+[8.875s] -- Installing: /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/share/turtlebot3_fake_node/cmake/ament_cmake_export_include_directories-extras.cmake
+[8.875s] -- Installing: /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/share/turtlebot3_fake_node/cmake/ament_cmake_export_dependencies-extras.cmake
+[8.875s] -- Installing: /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/share/turtlebot3_fake_node/cmake/turtlebot3_fake_nodeConfig.cmake
+[8.875s] -- Installing: /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/share/turtlebot3_fake_node/cmake/turtlebot3_fake_nodeConfig-version.cmake
+[8.875s] -- Installing: /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/share/turtlebot3_fake_node/package.xml
+[8.877s] Invoked command in '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_fake_node' returned '0': CMAKE_PREFIX_PATH=/home/hug/opentcs_ws/install/opentcs_ros2:/opt/ros/humble /usr/bin/cmake --install /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_fake_node

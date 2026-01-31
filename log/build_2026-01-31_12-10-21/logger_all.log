@@ -1,0 +1,399 @@
+[0.112s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.112s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x70c35a4a7370>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x70c35a4a7850>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x70c35a4a7850>>, mixin_verb=('build',))
+[0.214s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.214s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.214s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.214s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.214s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.214s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.214s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_fake_node) by extensions ['ignore', 'ignore_ament_install']
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_fake_node) by extension 'ignore'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_fake_node) by extension 'ignore_ament_install'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_fake_node) by extensions ['colcon_pkg']
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_fake_node) by extension 'colcon_pkg'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_fake_node) by extensions ['colcon_meta']
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_fake_node) by extension 'colcon_meta'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_fake_node) by extensions ['ros']
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_fake_node) by extension 'ros'
+[0.224s] DEBUG:colcon.colcon_core.package_identification:Package 'turtlebot3_fake_node' with type 'ros.ament_cmake' and name 'turtlebot3_fake_node'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_gazebo) by extensions ['ignore', 'ignore_ament_install']
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_gazebo) by extension 'ignore'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_gazebo) by extension 'ignore_ament_install'
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_gazebo) by extensions ['colcon_pkg']
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_gazebo) by extension 'colcon_pkg'
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_gazebo) by extensions ['colcon_meta']
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_gazebo) by extension 'colcon_meta'
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_gazebo) by extensions ['ros']
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_gazebo) by extension 'ros'
+[0.225s] DEBUG:colcon.colcon_core.package_identification:Package 'turtlebot3_gazebo' with type 'ros.ament_cmake' and name 'turtlebot3_gazebo'
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_manipulation_gazebo) by extensions ['ignore', 'ignore_ament_install']
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_manipulation_gazebo) by extension 'ignore'
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_manipulation_gazebo) by extension 'ignore_ament_install'
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_manipulation_gazebo) by extensions ['colcon_pkg']
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_manipulation_gazebo) by extension 'colcon_pkg'
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_manipulation_gazebo) by extensions ['colcon_meta']
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_manipulation_gazebo) by extension 'colcon_meta'
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_manipulation_gazebo) by extensions ['ros']
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_manipulation_gazebo) by extension 'ros'
+[0.226s] DEBUG:colcon.colcon_core.package_identification:Package 'turtlebot3_manipulation_gazebo' with type 'ros.ament_cmake' and name 'turtlebot3_manipulation_gazebo'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_opentcs_reality) by extensions ['ignore', 'ignore_ament_install']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_opentcs_reality) by extension 'ignore'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_opentcs_reality) by extension 'ignore_ament_install'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_opentcs_reality) by extensions ['colcon_pkg']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_opentcs_reality) by extension 'colcon_pkg'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_opentcs_reality) by extensions ['colcon_meta']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_opentcs_reality) by extension 'colcon_meta'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_opentcs_reality) by extensions ['ros']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_opentcs_reality) by extension 'ros'
+[0.226s] DEBUG:colcon.colcon_core.package_identification:Package 'turtlebot3_opentcs_reality' with type 'ros.ament_cmake' and name 'turtlebot3_opentcs_reality'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_opentcs_simulations) by extensions ['ignore', 'ignore_ament_install']
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_opentcs_simulations) by extension 'ignore'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_opentcs_simulations) by extension 'ignore_ament_install'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_opentcs_simulations) by extensions ['colcon_pkg']
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_opentcs_simulations) by extension 'colcon_pkg'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_opentcs_simulations) by extensions ['colcon_meta']
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_opentcs_simulations) by extension 'colcon_meta'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_opentcs_simulations) by extensions ['ros']
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_opentcs_simulations) by extension 'ros'
+[0.227s] DEBUG:colcon.colcon_core.package_identification:Package 'turtlebot3_opentcs_simulations' with type 'ros.catkin' and name 'turtlebot3_opentcs_simulations'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_tmp) by extensions ['ignore', 'ignore_ament_install']
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_tmp) by extension 'ignore'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_tmp) by extension 'ignore_ament_install'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_tmp) by extensions ['colcon_pkg']
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_tmp) by extension 'colcon_pkg'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_tmp) by extensions ['colcon_meta']
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_tmp) by extension 'colcon_meta'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_tmp) by extensions ['ros']
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_tmp) by extension 'ros'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_tmp) by extensions ['cmake', 'python']
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_tmp) by extension 'cmake'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_tmp) by extension 'python'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_tmp) by extensions ['python_setup_py']
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(turtlebot3_tmp) by extension 'python_setup_py'
+[0.227s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.227s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.227s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.227s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.227s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.250s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.250s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.252s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/hug/opentcs_ws/install
+[0.253s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 447 installed packages in /opt/ros/humble
+[0.254s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.284s] WARNING:colcon.colcon_core.package_selection:Some selected packages are already built in one or more underlay workspaces:
+	'turtlebot3_manipulation_gazebo' is in: /opt/ros/humble
+	'turtlebot3_fake_node' is in: /opt/ros/humble
+	'turtlebot3_gazebo' is in: /opt/ros/humble
+If a package in a merged underlay workspace is overridden and it installs headers, then all packages in the overlay must sort their include directories by workspace order. Failure to do so may result in build failures or undefined behavior at run time.
+If the overridden package is used by another package in any underlay, then the overriding package in the overlay must be API and ABI compatible or undefined behavior at run time may occur.
+
+If you understand the risks and want to override a package anyways, add the following to the command line:
+	--allow-overriding turtlebot3_fake_node turtlebot3_gazebo turtlebot3_manipulation_gazebo
+
+This may be promoted to an error in a future release of colcon-override-check.
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_fake_node' build argument 'cmake_args' from command line to 'None'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_fake_node' build argument 'cmake_target' from command line to 'None'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_fake_node' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_fake_node' build argument 'cmake_clean_cache' from command line to 'False'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_fake_node' build argument 'cmake_clean_first' from command line to 'False'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_fake_node' build argument 'cmake_force_configure' from command line to 'False'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_fake_node' build argument 'ament_cmake_args' from command line to 'None'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_fake_node' build argument 'catkin_cmake_args' from command line to 'None'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_fake_node' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.285s] DEBUG:colcon.colcon_core.verb:Building package 'turtlebot3_fake_node' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_fake_node', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node', 'merge_install': False, 'path': '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/turtlebot3_fake_node', 'symlink_install': False, 'test_result_base': None}
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_gazebo' build argument 'cmake_args' from command line to 'None'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_gazebo' build argument 'cmake_target' from command line to 'None'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_gazebo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_gazebo' build argument 'cmake_clean_cache' from command line to 'False'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_gazebo' build argument 'cmake_clean_first' from command line to 'False'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_gazebo' build argument 'cmake_force_configure' from command line to 'False'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_gazebo' build argument 'ament_cmake_args' from command line to 'None'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_gazebo' build argument 'catkin_cmake_args' from command line to 'None'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_gazebo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.285s] DEBUG:colcon.colcon_core.verb:Building package 'turtlebot3_gazebo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_gazebo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo', 'merge_install': False, 'path': '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/turtlebot3_gazebo', 'symlink_install': False, 'test_result_base': None}
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_manipulation_gazebo' build argument 'cmake_args' from command line to 'None'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_manipulation_gazebo' build argument 'cmake_target' from command line to 'None'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_manipulation_gazebo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_manipulation_gazebo' build argument 'cmake_clean_cache' from command line to 'False'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_manipulation_gazebo' build argument 'cmake_clean_first' from command line to 'False'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_manipulation_gazebo' build argument 'cmake_force_configure' from command line to 'False'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_manipulation_gazebo' build argument 'ament_cmake_args' from command line to 'None'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_manipulation_gazebo' build argument 'catkin_cmake_args' from command line to 'None'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_manipulation_gazebo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.285s] DEBUG:colcon.colcon_core.verb:Building package 'turtlebot3_manipulation_gazebo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_manipulation_gazebo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo', 'merge_install': False, 'path': '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/turtlebot3_manipulation_gazebo', 'symlink_install': False, 'test_result_base': None}
+[0.286s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_opentcs_simulations' build argument 'cmake_args' from command line to 'None'
+[0.286s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_opentcs_simulations' build argument 'cmake_target' from command line to 'None'
+[0.286s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_opentcs_simulations' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.286s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_opentcs_simulations' build argument 'cmake_clean_cache' from command line to 'False'
+[0.286s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_opentcs_simulations' build argument 'cmake_clean_first' from command line to 'False'
+[0.286s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_opentcs_simulations' build argument 'cmake_force_configure' from command line to 'False'
+[0.286s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_opentcs_simulations' build argument 'ament_cmake_args' from command line to 'None'
+[0.286s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_opentcs_simulations' build argument 'catkin_cmake_args' from command line to 'None'
+[0.286s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_opentcs_simulations' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.286s] DEBUG:colcon.colcon_core.verb:Building package 'turtlebot3_opentcs_simulations' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_opentcs_simulations', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_simulations', 'merge_install': False, 'path': '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/turtlebot3_opentcs_simulations', 'symlink_install': False, 'test_result_base': None}
+[0.286s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_opentcs_reality' build argument 'cmake_args' from command line to 'None'
+[0.286s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_opentcs_reality' build argument 'cmake_target' from command line to 'None'
+[0.286s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_opentcs_reality' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.286s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_opentcs_reality' build argument 'cmake_clean_cache' from command line to 'False'
+[0.286s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_opentcs_reality' build argument 'cmake_clean_first' from command line to 'False'
+[0.286s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_opentcs_reality' build argument 'cmake_force_configure' from command line to 'False'
+[0.286s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_opentcs_reality' build argument 'ament_cmake_args' from command line to 'None'
+[0.286s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_opentcs_reality' build argument 'catkin_cmake_args' from command line to 'None'
+[0.286s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_opentcs_reality' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.286s] DEBUG:colcon.colcon_core.verb:Building package 'turtlebot3_opentcs_reality' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_opentcs_reality', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_reality', 'merge_install': False, 'path': '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/turtlebot3_opentcs_reality', 'symlink_install': False, 'test_result_base': None}
+[0.286s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.287s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.287s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/turtlebot3_fake_node' with build type 'ament_cmake'
+[0.287s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/turtlebot3_fake_node'
+[0.290s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.290s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.291s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.293s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/turtlebot3_gazebo' with build type 'ament_cmake'
+[0.293s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/turtlebot3_gazebo'
+[0.293s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.293s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.295s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/turtlebot3_manipulation_gazebo' with build type 'ament_cmake'
+[0.296s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/turtlebot3_manipulation_gazebo'
+[0.296s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.296s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.299s] INFO:colcon.colcon_ros.task.catkin.build:Building ROS package in '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/turtlebot3_opentcs_simulations' with build type 'catkin'
+[0.299s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/turtlebot3_opentcs_simulations'
+[0.299s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.299s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.308s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_fake_node': CMAKE_PREFIX_PATH=/home/hug/opentcs_ws/install/opentcs_ros2:/opt/ros/humble /usr/bin/cmake --build /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_fake_node -- -j16 -l16
+[0.311s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_gazebo': CMAKE_PREFIX_PATH=/home/hug/opentcs_ws/install/opentcs_ros2:/opt/ros/humble /usr/bin/cmake --build /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_gazebo -- -j16 -l16
+[0.314s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_manipulation_gazebo': CMAKE_PREFIX_PATH=/home/hug/opentcs_ws/install/opentcs_ros2:/opt/ros/humble /usr/bin/cmake --build /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_manipulation_gazebo -- -j16 -l16
+[0.317s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_opentcs_simulations': /usr/bin/cmake --build /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_opentcs_simulations -- -j16 -l16
+[0.345s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_manipulation_gazebo' returned '0': CMAKE_PREFIX_PATH=/home/hug/opentcs_ws/install/opentcs_ros2:/opt/ros/humble /usr/bin/cmake --build /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_manipulation_gazebo -- -j16 -l16
+[0.354s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_manipulation_gazebo': CMAKE_PREFIX_PATH=/home/hug/opentcs_ws/install/opentcs_ros2:/opt/ros/humble /usr/bin/cmake --install /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_manipulation_gazebo
+[0.356s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_opentcs_simulations' returned '0': /usr/bin/cmake --build /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_opentcs_simulations -- -j16 -l16
+[0.358s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_opentcs_simulations': /usr/bin/cmake --install /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_opentcs_simulations
+[0.372s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_fake_node' returned '0': CMAKE_PREFIX_PATH=/home/hug/opentcs_ws/install/opentcs_ros2:/opt/ros/humble /usr/bin/cmake --build /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_fake_node -- -j16 -l16
+[0.372s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlebot3_opentcs_simulations', 'ros_package_path')
+[0.372s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_simulations/share/turtlebot3_opentcs_simulations/hook/ros_package_path.ps1'
+[0.374s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_fake_node': CMAKE_PREFIX_PATH=/home/hug/opentcs_ws/install/opentcs_ros2:/opt/ros/humble /usr/bin/cmake --install /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_fake_node
+[0.374s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_simulations/share/turtlebot3_opentcs_simulations/hook/ros_package_path.dsv'
+[0.374s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_opentcs_simulations' returned '0': /usr/bin/cmake --install /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_opentcs_simulations
+[0.375s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_simulations/share/turtlebot3_opentcs_simulations/hook/ros_package_path.sh'
+[0.377s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlebot3_opentcs_simulations', 'pkg_config_path')
+[0.377s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_simulations/share/turtlebot3_opentcs_simulations/hook/pkg_config_path.ps1'
+[0.379s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_simulations/share/turtlebot3_opentcs_simulations/hook/pkg_config_path.dsv'
+[0.380s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_simulations/share/turtlebot3_opentcs_simulations/hook/pkg_config_path.sh'
+[0.382s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlebot3_opentcs_simulations', 'pkg_config_path_multiarch')
+[0.382s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_simulations/share/turtlebot3_opentcs_simulations/hook/pkg_config_path_multiarch.ps1'
+[0.383s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_simulations/share/turtlebot3_opentcs_simulations/hook/pkg_config_path_multiarch.dsv'
+[0.383s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_simulations/share/turtlebot3_opentcs_simulations/hook/pkg_config_path_multiarch.sh'
+[0.385s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(turtlebot3_opentcs_simulations)
+[0.390s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_simulations' for CMake module files
+[0.391s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_simulations' for CMake config files
+[0.391s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlebot3_opentcs_simulations', 'cmake_prefix_path')
+[0.392s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_simulations/share/turtlebot3_opentcs_simulations/hook/cmake_prefix_path.ps1'
+[0.392s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_simulations/share/turtlebot3_opentcs_simulations/hook/cmake_prefix_path.dsv'
+[0.392s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_simulations/share/turtlebot3_opentcs_simulations/hook/cmake_prefix_path.sh'
+[0.393s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_simulations/bin'
+[0.393s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_simulations/lib/pkgconfig/turtlebot3_opentcs_simulations.pc'
+[0.393s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_simulations/lib/python3.10/site-packages'
+[0.393s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_simulations/bin'
+[0.393s] INFO:colcon.colcon_core.shell:Creating package script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_simulations/share/turtlebot3_opentcs_simulations/package.ps1'
+[0.394s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_simulations/share/turtlebot3_opentcs_simulations/package.dsv'
+[0.395s] INFO:colcon.colcon_core.shell:Creating package script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_simulations/share/turtlebot3_opentcs_simulations/package.sh'
+[0.395s] INFO:colcon.colcon_core.shell:Creating package script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_simulations/share/turtlebot3_opentcs_simulations/package.bash'
+[0.396s] INFO:colcon.colcon_core.shell:Creating package script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_simulations/share/turtlebot3_opentcs_simulations/package.zsh'
+[0.396s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_simulations/share/colcon-core/packages/turtlebot3_opentcs_simulations)
+[0.396s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(turtlebot3_manipulation_gazebo)
+[0.397s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo' for CMake module files
+[0.397s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_manipulation_gazebo' returned '0': CMAKE_PREFIX_PATH=/home/hug/opentcs_ws/install/opentcs_ros2:/opt/ros/humble /usr/bin/cmake --install /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_manipulation_gazebo
+[0.398s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo' for CMake config files
+[0.400s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlebot3_manipulation_gazebo', 'cmake_prefix_path')
+[0.400s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo/share/turtlebot3_manipulation_gazebo/hook/cmake_prefix_path.ps1'
+[0.400s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo/share/turtlebot3_manipulation_gazebo/hook/cmake_prefix_path.dsv'
+[0.401s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo/share/turtlebot3_manipulation_gazebo/hook/cmake_prefix_path.sh'
+[0.402s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo/bin'
+[0.402s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo/lib/pkgconfig/turtlebot3_manipulation_gazebo.pc'
+[0.402s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo/lib/python3.10/site-packages'
+[0.402s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo/bin'
+[0.403s] INFO:colcon.colcon_core.shell:Creating package script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo/share/turtlebot3_manipulation_gazebo/package.ps1'
+[0.403s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo/share/turtlebot3_manipulation_gazebo/package.dsv'
+[0.404s] INFO:colcon.colcon_core.shell:Creating package script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo/share/turtlebot3_manipulation_gazebo/package.sh'
+[0.404s] INFO:colcon.colcon_core.shell:Creating package script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo/share/turtlebot3_manipulation_gazebo/package.bash'
+[0.404s] INFO:colcon.colcon_core.shell:Creating package script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo/share/turtlebot3_manipulation_gazebo/package.zsh'
+[0.405s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo/share/colcon-core/packages/turtlebot3_manipulation_gazebo)
+[0.405s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(turtlebot3_manipulation_gazebo)
+[0.406s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo' for CMake module files
+[0.406s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo' for CMake config files
+[0.408s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlebot3_manipulation_gazebo', 'cmake_prefix_path')
+[0.408s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo/share/turtlebot3_manipulation_gazebo/hook/cmake_prefix_path.ps1'
+[0.408s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo/share/turtlebot3_manipulation_gazebo/hook/cmake_prefix_path.dsv'
+[0.409s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo/share/turtlebot3_manipulation_gazebo/hook/cmake_prefix_path.sh'
+[0.409s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo/bin'
+[0.409s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo/lib/pkgconfig/turtlebot3_manipulation_gazebo.pc'
+[0.410s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo/lib/python3.10/site-packages'
+[0.410s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo/bin'
+[0.410s] INFO:colcon.colcon_core.shell:Creating package script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo/share/turtlebot3_manipulation_gazebo/package.ps1'
+[0.411s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo/share/turtlebot3_manipulation_gazebo/package.dsv'
+[0.411s] INFO:colcon.colcon_core.shell:Creating package script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo/share/turtlebot3_manipulation_gazebo/package.sh'
+[0.412s] INFO:colcon.colcon_core.shell:Creating package script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo/share/turtlebot3_manipulation_gazebo/package.bash'
+[0.412s] INFO:colcon.colcon_core.shell:Creating package script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo/share/turtlebot3_manipulation_gazebo/package.zsh'
+[0.413s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo/share/colcon-core/packages/turtlebot3_manipulation_gazebo)
+[0.416s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_gazebo' returned '0': CMAKE_PREFIX_PATH=/home/hug/opentcs_ws/install/opentcs_ros2:/opt/ros/humble /usr/bin/cmake --build /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_gazebo -- -j16 -l16
+[0.417s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_gazebo': CMAKE_PREFIX_PATH=/home/hug/opentcs_ws/install/opentcs_ros2:/opt/ros/humble /usr/bin/cmake --install /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_gazebo
+[0.418s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(turtlebot3_fake_node)
+[0.418s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node' for CMake module files
+[0.419s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_fake_node' returned '0': CMAKE_PREFIX_PATH=/home/hug/opentcs_ws/install/opentcs_ros2:/opt/ros/humble /usr/bin/cmake --install /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_fake_node
+[0.419s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node' for CMake config files
+[0.420s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlebot3_fake_node', 'cmake_prefix_path')
+[0.420s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/share/turtlebot3_fake_node/hook/cmake_prefix_path.ps1'
+[0.421s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/share/turtlebot3_fake_node/hook/cmake_prefix_path.dsv'
+[0.421s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/share/turtlebot3_fake_node/hook/cmake_prefix_path.sh'
+[0.422s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/lib'
+[0.422s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/bin'
+[0.422s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/lib/pkgconfig/turtlebot3_fake_node.pc'
+[0.422s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/lib/python3.10/site-packages'
+[0.423s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/bin'
+[0.423s] INFO:colcon.colcon_core.shell:Creating package script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/share/turtlebot3_fake_node/package.ps1'
+[0.427s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/share/turtlebot3_fake_node/package.dsv'
+[0.434s] INFO:colcon.colcon_core.shell:Creating package script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/share/turtlebot3_fake_node/package.sh'
+[0.435s] INFO:colcon.colcon_core.shell:Creating package script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/share/turtlebot3_fake_node/package.bash'
+[0.438s] INFO:colcon.colcon_core.shell:Creating package script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/share/turtlebot3_fake_node/package.zsh'
+[0.439s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/share/colcon-core/packages/turtlebot3_fake_node)
+[0.440s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(turtlebot3_fake_node)
+[0.440s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node' for CMake module files
+[0.442s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node' for CMake config files
+[0.442s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlebot3_fake_node', 'cmake_prefix_path')
+[0.442s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/share/turtlebot3_fake_node/hook/cmake_prefix_path.ps1'
+[0.443s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/share/turtlebot3_fake_node/hook/cmake_prefix_path.dsv'
+[0.443s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/share/turtlebot3_fake_node/hook/cmake_prefix_path.sh'
+[0.444s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/lib'
+[0.444s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/bin'
+[0.444s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/lib/pkgconfig/turtlebot3_fake_node.pc'
+[0.444s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/lib/python3.10/site-packages'
+[0.444s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/bin'
+[0.444s] INFO:colcon.colcon_core.shell:Creating package script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/share/turtlebot3_fake_node/package.ps1'
+[0.445s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/share/turtlebot3_fake_node/package.dsv'
+[0.445s] INFO:colcon.colcon_core.shell:Creating package script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/share/turtlebot3_fake_node/package.sh'
+[0.446s] INFO:colcon.colcon_core.shell:Creating package script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/share/turtlebot3_fake_node/package.bash'
+[0.446s] INFO:colcon.colcon_core.shell:Creating package script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/share/turtlebot3_fake_node/package.zsh'
+[0.447s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node/share/colcon-core/packages/turtlebot3_fake_node)
+[0.447s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(turtlebot3_gazebo)
+[0.448s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo' for CMake module files
+[0.448s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_gazebo' returned '0': CMAKE_PREFIX_PATH=/home/hug/opentcs_ws/install/opentcs_ros2:/opt/ros/humble /usr/bin/cmake --install /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_gazebo
+[0.449s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo' for CMake config files
+[0.451s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlebot3_gazebo', 'cmake_prefix_path')
+[0.451s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo/share/turtlebot3_gazebo/hook/cmake_prefix_path.ps1'
+[0.451s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo/share/turtlebot3_gazebo/hook/cmake_prefix_path.dsv'
+[0.451s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo/share/turtlebot3_gazebo/hook/cmake_prefix_path.sh'
+[0.452s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo/lib'
+[0.452s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo/bin'
+[0.452s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo/lib/pkgconfig/turtlebot3_gazebo.pc'
+[0.452s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo/lib/python3.10/site-packages'
+[0.452s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo/bin'
+[0.452s] INFO:colcon.colcon_core.shell:Creating package script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo/share/turtlebot3_gazebo/package.ps1'
+[0.452s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo/share/turtlebot3_gazebo/package.dsv'
+[0.452s] INFO:colcon.colcon_core.shell:Creating package script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo/share/turtlebot3_gazebo/package.sh'
+[0.453s] INFO:colcon.colcon_core.shell:Creating package script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo/share/turtlebot3_gazebo/package.bash'
+[0.453s] INFO:colcon.colcon_core.shell:Creating package script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo/share/turtlebot3_gazebo/package.zsh'
+[0.453s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo/share/colcon-core/packages/turtlebot3_gazebo)
+[0.453s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(turtlebot3_gazebo)
+[0.453s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo' for CMake module files
+[0.454s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo' for CMake config files
+[0.454s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlebot3_gazebo', 'cmake_prefix_path')
+[0.455s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo/share/turtlebot3_gazebo/hook/cmake_prefix_path.ps1'
+[0.455s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo/share/turtlebot3_gazebo/hook/cmake_prefix_path.dsv'
+[0.455s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo/share/turtlebot3_gazebo/hook/cmake_prefix_path.sh'
+[0.455s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo/lib'
+[0.455s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo/bin'
+[0.455s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo/lib/pkgconfig/turtlebot3_gazebo.pc'
+[0.456s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo/lib/python3.10/site-packages'
+[0.456s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo/bin'
+[0.456s] INFO:colcon.colcon_core.shell:Creating package script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo/share/turtlebot3_gazebo/package.ps1'
+[0.456s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo/share/turtlebot3_gazebo/package.dsv'
+[0.456s] INFO:colcon.colcon_core.shell:Creating package script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo/share/turtlebot3_gazebo/package.sh'
+[0.457s] INFO:colcon.colcon_core.shell:Creating package script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo/share/turtlebot3_gazebo/package.bash'
+[0.457s] INFO:colcon.colcon_core.shell:Creating package script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo/share/turtlebot3_gazebo/package.zsh'
+[0.457s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo/share/colcon-core/packages/turtlebot3_gazebo)
+[0.457s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/turtlebot3_opentcs_reality' with build type 'ament_cmake'
+[0.457s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/turtlebot3_opentcs_reality'
+[0.457s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.457s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.465s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_opentcs_reality': AMENT_PREFIX_PATH=/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo:/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo:/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo:/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo:/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node:/home/hug/opentcs_ws/install/opentcs_ros2:/opt/ros/humble /usr/bin/cmake /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/turtlebot3_opentcs_reality -DCMAKE_INSTALL_PREFIX=/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_reality
+[0.943s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_opentcs_reality' returned '0': AMENT_PREFIX_PATH=/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo:/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo:/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo:/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo:/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node:/home/hug/opentcs_ws/install/opentcs_ros2:/opt/ros/humble /usr/bin/cmake /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/turtlebot3_opentcs_reality -DCMAKE_INSTALL_PREFIX=/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_reality
+[0.945s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_opentcs_reality': AMENT_PREFIX_PATH=/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo:/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo:/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo:/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo:/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node:/home/hug/opentcs_ws/install/opentcs_ros2:/opt/ros/humble /usr/bin/cmake --build /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_opentcs_reality -- -j16 -l16
+[0.973s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_opentcs_reality' returned '0': AMENT_PREFIX_PATH=/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo:/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo:/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo:/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo:/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node:/home/hug/opentcs_ws/install/opentcs_ros2:/opt/ros/humble /usr/bin/cmake --build /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_opentcs_reality -- -j16 -l16
+[0.974s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_opentcs_reality': AMENT_PREFIX_PATH=/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo:/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo:/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo:/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo:/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node:/home/hug/opentcs_ws/install/opentcs_ros2:/opt/ros/humble /usr/bin/cmake --install /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_opentcs_reality
+[0.981s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(turtlebot3_opentcs_reality)
+[0.981s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_reality' for CMake module files
+[0.982s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_opentcs_reality' returned '0': AMENT_PREFIX_PATH=/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo:/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo:/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_manipulation_gazebo:/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_gazebo:/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_fake_node:/home/hug/opentcs_ws/install/opentcs_ros2:/opt/ros/humble /usr/bin/cmake --install /home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/build/turtlebot3_opentcs_reality
+[0.982s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_reality' for CMake config files
+[0.982s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlebot3_opentcs_reality', 'cmake_prefix_path')
+[0.983s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_reality/share/turtlebot3_opentcs_reality/hook/cmake_prefix_path.ps1'
+[0.983s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_reality/share/turtlebot3_opentcs_reality/hook/cmake_prefix_path.dsv'
+[0.984s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_reality/share/turtlebot3_opentcs_reality/hook/cmake_prefix_path.sh'
+[0.984s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_reality/bin'
+[0.984s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_reality/lib/pkgconfig/turtlebot3_opentcs_reality.pc'
+[0.985s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_reality/lib/python3.10/site-packages'
+[0.985s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_reality/bin'
+[0.985s] INFO:colcon.colcon_core.shell:Creating package script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_reality/share/turtlebot3_opentcs_reality/package.ps1'
+[0.986s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_reality/share/turtlebot3_opentcs_reality/package.dsv'
+[0.986s] INFO:colcon.colcon_core.shell:Creating package script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_reality/share/turtlebot3_opentcs_reality/package.sh'
+[0.986s] INFO:colcon.colcon_core.shell:Creating package script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_reality/share/turtlebot3_opentcs_reality/package.bash'
+[0.986s] INFO:colcon.colcon_core.shell:Creating package script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_reality/share/turtlebot3_opentcs_reality/package.zsh'
+[0.986s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_reality/share/colcon-core/packages/turtlebot3_opentcs_reality)
+[0.987s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(turtlebot3_opentcs_reality)
+[0.987s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_reality' for CMake module files
+[0.987s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_reality' for CMake config files
+[0.987s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlebot3_opentcs_reality', 'cmake_prefix_path')
+[0.987s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_reality/share/turtlebot3_opentcs_reality/hook/cmake_prefix_path.ps1'
+[0.988s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_reality/share/turtlebot3_opentcs_reality/hook/cmake_prefix_path.dsv'
+[0.988s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_reality/share/turtlebot3_opentcs_reality/hook/cmake_prefix_path.sh'
+[0.988s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_reality/bin'
+[0.989s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_reality/lib/pkgconfig/turtlebot3_opentcs_reality.pc'
+[0.989s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_reality/lib/python3.10/site-packages'
+[0.989s] Level 1:colcon.colcon_core.environment:checking '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_reality/bin'
+[0.989s] INFO:colcon.colcon_core.shell:Creating package script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_reality/share/turtlebot3_opentcs_reality/package.ps1'
+[0.990s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_reality/share/turtlebot3_opentcs_reality/package.dsv'
+[0.990s] INFO:colcon.colcon_core.shell:Creating package script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_reality/share/turtlebot3_opentcs_reality/package.sh'
+[0.990s] INFO:colcon.colcon_core.shell:Creating package script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_reality/share/turtlebot3_opentcs_reality/package.bash'
+[0.990s] INFO:colcon.colcon_core.shell:Creating package script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_reality/share/turtlebot3_opentcs_reality/package.zsh'
+[0.991s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/turtlebot3_opentcs_reality/share/colcon-core/packages/turtlebot3_opentcs_reality)
+[0.991s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[0.991s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[0.991s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[0.991s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[0.997s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[0.997s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[0.997s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.006s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.006s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/local_setup.ps1'
+[1.007s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/_local_setup_util_ps1.py'
+[1.009s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/setup.ps1'
+[1.010s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/local_setup.sh'
+[1.012s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/_local_setup_util_sh.py'
+[1.013s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/setup.sh'
+[1.014s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/local_setup.bash'
+[1.015s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/setup.bash'
+[1.016s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/local_setup.zsh'
+[1.017s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/hug/turtlebot3_ws/src/turtlebot3_simulations_and_reality/install/setup.zsh'

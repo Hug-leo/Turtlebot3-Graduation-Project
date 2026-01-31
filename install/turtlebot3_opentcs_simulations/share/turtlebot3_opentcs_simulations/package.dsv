@@ -1,0 +1,12 @@
+source;share/turtlebot3_opentcs_simulations/hook/cmake_prefix_path.ps1
+source;share/turtlebot3_opentcs_simulations/hook/cmake_prefix_path.dsv
+source;share/turtlebot3_opentcs_simulations/hook/cmake_prefix_path.sh
+source;share/turtlebot3_opentcs_simulations/hook/ros_package_path.ps1
+source;share/turtlebot3_opentcs_simulations/hook/ros_package_path.dsv
+source;share/turtlebot3_opentcs_simulations/hook/ros_package_path.sh
+source;share/turtlebot3_opentcs_simulations/hook/pkg_config_path.ps1
+source;share/turtlebot3_opentcs_simulations/hook/pkg_config_path.dsv
+source;share/turtlebot3_opentcs_simulations/hook/pkg_config_path.sh
+source;share/turtlebot3_opentcs_simulations/hook/pkg_config_path_multiarch.ps1
+source;share/turtlebot3_opentcs_simulations/hook/pkg_config_path_multiarch.dsv
+source;share/turtlebot3_opentcs_simulations/hook/pkg_config_path_multiarch.sh
