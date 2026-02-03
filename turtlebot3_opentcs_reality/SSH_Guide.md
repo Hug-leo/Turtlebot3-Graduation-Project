@@ -254,6 +254,11 @@ sudo netplan apply
 
 ---
 
+Scan ip from laptop:
+
+sudo apt install -y net-tools
+sudo arp -a
+
 ## F2. Enable internet sharing
 
 ```bash
@@ -366,24 +371,47 @@ ros2 run demo_nodes_cpp listener
 | No topics                  | ROS_DOMAIN_ID mismatch                |
 | Internet broken            | NAT rules missing                     |
 
----
+Config wifi on Pi with Ubuntu Server (VERY likely if you saw “network config”)
+Had ssh by router and want to connect with wifi
 
-# ✅ YOU NOW HAVE
+It uses Netplan.
 
-- Clean SSH
-- Static IP
-- Internet sharing
-- ROS 2 Humble on Pi
-- Laptop ↔ Pi ROS communication
-- A **reusable, correct reference**
+1️⃣ Open Netplan config
+ls /etc/netplan/
 
----
+You’ll see something like:
 
-If you want, next I can give you:
+50-cloud-init.yaml
 
-- ✅ TurtleBot3 real robot bringup
-- ✅ micro-ROS with STM32
-- ✅ ROS 2 project template
-- ✅ Backup script (one-command recovery)
+Edit it:
 
-Just tell me 👍
+sudo nano /etc/netplan/50-cloud-init.yaml
+
+2️⃣ Replace Wi-Fi section with THIS
+network:
+version: 2
+wifis:
+wlan0:
+dhcp4: true
+access-points:
+"YOUR_HOME_WIFI":
+password: "YOUR_HOME_PASSWORD"
+
+⚠️ YAML is VERY strict:
+
+Spaces matter
+
+Quotes matter
+
+No tabs
+
+3️⃣ Apply config
+sudo netplan generate
+sudo netplan apply
+
+Or reboot:
+
+sudo reboot
+
+4️⃣ Check IP
+ip addr show wlan0
