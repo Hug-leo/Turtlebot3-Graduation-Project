@@ -1,0 +1,39 @@
+created_at: '20260430_234251'
+config: /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/share/turtlebot3_drl_local_planner/config/gap_sac.yaml
+episodes: 500
+max_steps_per_episode: 250
+resume_checkpoint: /home/hug/tb3_sim_ws/runs/gap_sac_20260429_093042/checkpoint_ep_99.pt
+curriculum_enabled: true
+start_stage: stage_1
+promotion_window: 20
+min_success_rate: 0.8
+max_collision_rate: 0.05
+stages:
+- name: stage_1
+  goal:
+    x: -1.0
+    y: -0.2
+    yaw: 0.0
+  min_episodes: 30
+  max_episodes: 150
+- name: stage_1_5
+  goal:
+    x: -0.7
+    y: -0.1
+    yaw: 0.0
+  min_episodes: 30
+  max_episodes: 150
+- name: stage_2a
+  goal:
+    x: -0.5
+    y: 0.0
+    yaw: 0.0
+  min_episodes: 30
+  max_episodes: 150
+- name: stage_2b
+  goal:
+    x: -0.3
+    y: 0.0
+    yaw: 0.0
+  min_episodes: 30
+  max_episodes: 150

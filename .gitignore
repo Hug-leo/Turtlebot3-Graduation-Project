@@ -1,0 +1,7 @@
+# Alternate git metadata used in this workspace because .git is mounted read-only
+.repo_git/
+
+# Project folders intentionally not pushed
+docs/
+turtlebot3_drl_nav2_controller/
+src/turtlebot3_drl_nav2_controller/

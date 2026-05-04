@@ -1,0 +1,80 @@
+created_at: '20260502_145623'
+config: /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/share/turtlebot3_drl_local_planner/config/gap_sac.yaml
+episodes: 1000
+max_steps_per_episode: 250
+resume_checkpoint: /home/hug/tb3_sim_ws/runs/gap_sac_20260430_234251/best_checkpoint.pt
+curriculum_enabled: true
+start_stage: local_forward_04
+promotion_window: 20
+min_success_rate: 0.85
+max_collision_rate: 0.02
+stages:
+- name: local_forward_04
+  local_goal_offset:
+    dx: 0.4
+    dy: 0.0
+    dyaw: 0.0
+  min_episodes: 30
+  max_episodes: 120
+- name: local_forward_06
+  local_goal_offset:
+    dx: 0.6
+    dy: 0.0
+    dyaw: 0.0
+  min_episodes: 30
+  max_episodes: 120
+- name: local_slight_left_06
+  local_goal_offset:
+    dx: 0.55
+    dy: 0.25
+    dyaw: 0.0
+  min_episodes: 30
+  max_episodes: 120
+- name: local_slight_right_06
+  local_goal_offset:
+    dx: 0.55
+    dy: -0.25
+    dyaw: 0.0
+  min_episodes: 30
+  max_episodes: 120
+- name: local_sharp_left_08
+  local_goal_offset:
+    dx: 0.75
+    dy: 0.35
+    dyaw: 0.0
+  min_episodes: 30
+  max_episodes: 150
+- name: local_sharp_right_08
+  local_goal_offset:
+    dx: 0.75
+    dy: -0.35
+    dyaw: 0.0
+  min_episodes: 30
+  max_episodes: 150
+- name: local_random_offsets
+  random_start: true
+  random_local_goal: true
+  local_goal_offsets:
+  - dx: 0.4
+    dy: 0.0
+    dyaw: 0.0
+  - dx: 0.6
+    dy: 0.0
+    dyaw: 0.0
+  - dx: 0.8
+    dy: 0.0
+    dyaw: 0.0
+  - dx: 0.55
+    dy: 0.25
+    dyaw: 0.0
+  - dx: 0.55
+    dy: -0.25
+    dyaw: 0.0
+  - dx: 0.75
+    dy: 0.35
+    dyaw: 0.0
+  - dx: 0.75
+    dy: -0.35
+    dyaw: 0.0
+  min_episodes: 40
+  max_episodes: 180

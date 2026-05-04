@@ -1,0 +1,183 @@
+created_at: '20260502_221944'
+config: /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/share/turtlebot3_drl_local_planner/config/gap_sac.yaml
+episodes: 1200
+max_steps_per_episode: 250
+resume_checkpoint: /home/hug/tb3_sim_ws/runs/gap_sac_20260502_145623/deployment_checkpoint.pt
+curriculum_enabled: true
+start_stage: hard_forward_08
+promotion_window: 25
+min_success_rate: 0.85
+max_collision_rate: 0.02
+min_obstacle_exposure_rate: 0.35
+eval_episodes_on_promotion: 5
+min_eval_success_rate: 0.8
+stages:
+- name: hard_forward_08
+  random_start: true
+  safe_start_poses:
+  - x: -2.0
+    y: -0.5
+    z: 0.05
+    yaw: 0.0
+  - x: -1.9
+    y: -1.55
+    z: 0.05
+    yaw: 0.0
+  - x: -1.9
+    y: 0.55
+    z: 0.05
+    yaw: 0.0
+  random_local_goal: true
+  local_goal_offsets:
+  - dx: 0.8
+    dy: 0.0
+    dyaw: 0.0
+  - dx: 1.0
+    dy: 0.0
+    dyaw: 0.0
+  exposure_distance: 0.46
+  min_exposure_steps: 2
+  min_obstacle_exposure_rate: 0.25
+  min_episodes: 50
+  max_episodes: 220
+- name: hard_diagonal_turns
+  random_start: true
+  random_local_goal: true
+  local_goal_offsets:
+  - dx: 0.75
+    dy: 0.35
+    dyaw: 0.0
+  - dx: 0.75
+    dy: -0.35
+    dyaw: 0.0
+  - dx: 0.9
+    dy: 0.45
+    dyaw: 0.0
+  - dx: 0.9
+    dy: -0.45
+    dyaw: 0.0
+  exposure_distance: 0.44
+  min_exposure_steps: 3
+  min_obstacle_exposure_rate: 0.35
+  min_episodes: 60
+  max_episodes: 260
+- name: hard_narrow_gap_forward
+  random_start: true
+  safe_start_poses:
+  - x: -0.55
+    y: -1.75
+    z: 0.05
+    yaw: 1.57
+  - x: -0.55
+    y: 1.75
+    z: 0.05
+    yaw: -1.57
+  - x: 0.55
+    y: -1.75
+    z: 0.05
+    yaw: 1.57
+  - x: 0.55
+    y: 1.75
+    z: 0.05
+    yaw: -1.57
+  random_local_goal: true
+  local_goal_offsets:
+  - dx: 0.8
+    dy: 0.0
+    dyaw: 0.0
+  - dx: 1.0
+    dy: 0.0
+    dyaw: 0.0
+  - dx: 1.2
+    dy: 0.0
+    dyaw: 0.0
+  exposure_distance: 0.42
+  narrow_gap_clearance: 0.5
+  min_exposure_steps: 4
+  min_narrow_gap_steps: 4
+  min_obstacle_exposure_rate: 0.45
+  min_episodes: 80
+  max_episodes: 320
+- name: hard_gap_turns
+  random_start: true
+  safe_start_poses:
+  - x: -0.55
+    y: -1.75
+    z: 0.05
+    yaw: 1.57
+  - x: -0.55
+    y: 1.75
+    z: 0.05
+    yaw: -1.57
+  - x: 0.55
+    y: -1.75
+    z: 0.05
+    yaw: 1.57
+  - x: 0.55
+    y: 1.75
+    z: 0.05
+    yaw: -1.57
+  - x: 1.65
+    y: -0.55
+    z: 0.05
+    yaw: 3.14
+  - x: 1.65
+    y: 0.55
+    z: 0.05
+    yaw: 3.14
+  random_local_goal: true
+  local_goal_offsets:
+  - dx: 0.8
+    dy: 0.35
+    dyaw: 0.0
+  - dx: 0.8
+    dy: -0.35
+    dyaw: 0.0
+  - dx: 1.0
+    dy: 0.45
+    dyaw: 0.0
+  - dx: 1.0
+    dy: -0.45
+    dyaw: 0.0
+  exposure_distance: 0.42
+  narrow_gap_clearance: 0.5
+  min_exposure_steps: 4
+  min_narrow_gap_steps: 3
+  min_obstacle_exposure_rate: 0.45
+  min_episodes: 80
+  max_episodes: 340
+- name: hard_random_gap_offsets
+  random_start: true
+  random_local_goal: true
+  local_goal_offsets:
+  - dx: 0.6
+    dy: 0.0
+    dyaw: 0.0
+  - dx: 0.8
+    dy: 0.0
+    dyaw: 0.0
+  - dx: 1.0
+    dy: 0.0
+    dyaw: 0.0
+  - dx: 1.2
+    dy: 0.0
+    dyaw: 0.0
+  - dx: 0.75
+    dy: 0.35
+    dyaw: 0.0
+  - dx: 0.75
+    dy: -0.35
+    dyaw: 0.0
+  - dx: 0.9
+    dy: 0.45
+    dyaw: 0.0
+  - dx: 0.9
+    dy: -0.45
+    dyaw: 0.0
+  exposure_distance: 0.44
+  narrow_gap_clearance: 0.5
+  min_exposure_steps: 3
+  min_narrow_gap_steps: 2
+  min_obstacle_exposure_rate: 0.4
+  min_episodes: 100
+  max_episodes: 420

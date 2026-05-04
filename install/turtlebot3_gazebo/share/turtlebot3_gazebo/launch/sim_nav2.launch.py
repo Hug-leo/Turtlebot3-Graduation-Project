@@ -1,0 +1,1 @@
+/home/hug/tb3_sim_ws/src/turtlebot3_gazebo/launch/sim_nav2.launch.py

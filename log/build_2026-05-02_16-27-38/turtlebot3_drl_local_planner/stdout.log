@@ -1,0 +1,20 @@
+running develop
+running egg_info
+writing turtlebot3_drl_local_planner.egg-info/PKG-INFO
+writing dependency_links to turtlebot3_drl_local_planner.egg-info/dependency_links.txt
+writing entry points to turtlebot3_drl_local_planner.egg-info/entry_points.txt
+writing requirements to turtlebot3_drl_local_planner.egg-info/requires.txt
+writing top-level names to turtlebot3_drl_local_planner.egg-info/top_level.txt
+reading manifest file 'turtlebot3_drl_local_planner.egg-info/SOURCES.txt'
+writing manifest file 'turtlebot3_drl_local_planner.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3-drl-local-planner.egg-link (link to .)
+Installing drl_controller_node script to /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/turtlebot3_drl_local_planner
+Installing eval_policy script to /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/turtlebot3_drl_local_planner
+Installing eval_shadow_compare script to /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/turtlebot3_drl_local_planner
+Installing export_policy script to /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/turtlebot3_drl_local_planner
+Installing train_gap_sac script to /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/turtlebot3_drl_local_planner
+
+Installed /home/hug/tb3_sim_ws/build/turtlebot3_drl_local_planner
+running symlink_data
+symbolically linking /home/hug/tb3_sim_ws/build/turtlebot3_drl_local_planner/launch/drl_nav2_replacement.launch.py -> /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/share/turtlebot3_drl_local_planner/launch

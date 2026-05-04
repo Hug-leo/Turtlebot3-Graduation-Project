@@ -1,0 +1,7 @@
+[console_scripts]
+drl_controller_node = turtlebot3_drl_local_planner.nodes.drl_controller_node:main
+eval_policy = turtlebot3_drl_local_planner.eval_policy:main
+eval_shadow_compare = turtlebot3_drl_local_planner.eval_shadow_compare:main
+export_policy = turtlebot3_drl_local_planner.export_policy:main
+train_gap_sac = turtlebot3_drl_local_planner.train_gap_sac:main
+

@@ -1,0 +1,14 @@
+{
+    "cmake.sourceDirectory": "/home/hug/tb3_sim_ws/src/turtlebot3_gazebo",
+    "cmake.configureSettings": {
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+    },
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    "C_Cpp.default.compileCommands": "${workspaceFolder}/build/turtlebot3_drl_nav2_controller/compile_commands.json",
+    "C_Cpp.default.browse.path": [
+        "${workspaceFolder}/src",
+        "${workspaceFolder}/build/turtlebot3_drl_nav2_controller",
+        "${workspaceFolder}/install",
+        "/opt/ros/humble/include"
+    ]
+}
