@@ -1,0 +1,565 @@
+created_at: '20260504_233207'
+config: /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/share/turtlebot3_drl_local_planner/config/gap_sac.yaml
+episodes: 1000
+max_steps_per_episode: 250
+resume_checkpoint: /home/hug/tb3_sim_ws/runs/gap_sac_20260503_164614/best_checkpoint.pt
+curriculum_enabled: true
+start_stage: hard_two_turn_sequences
+promotion_window: 25
+min_success_rate: 0.85
+max_collision_rate: 0.02
+min_obstacle_exposure_rate: 0.35
+eval_episodes_on_promotion: 5
+min_eval_success_rate: 0.8
+stages:
+- name: hard_forward_08
+  random_start: true
+  safe_start_poses:
+  - x: -2.0
+    y: -0.5
+    z: 0.05
+    yaw: 0.0
+  - x: -1.9
+    y: -1.55
+    z: 0.05
+    yaw: 0.0
+  - x: -1.9
+    y: 0.55
+    z: 0.05
+    yaw: 0.0
+  random_local_goal: true
+  local_goal_offsets:
+  - dx: 0.8
+    dy: 0.0
+    dyaw: 0.0
+  - dx: 1.0
+    dy: 0.0
+    dyaw: 0.0
+  exposure_distance: 0.46
+  min_exposure_steps: 2
+  min_obstacle_exposure_rate: 0.25
+  min_episodes: 50
+  max_episodes: 220
+- name: hard_diagonal_turns
+  random_start: true
+  random_local_goal: true
+  local_goal_offsets:
+  - dx: 0.75
+    dy: 0.35
+    dyaw: 0.0
+  - dx: 0.75
+    dy: -0.35
+    dyaw: 0.0
+  - dx: 0.9
+    dy: 0.45
+    dyaw: 0.0
+  - dx: 0.9
+    dy: -0.45
+    dyaw: 0.0
+  exposure_distance: 0.44
+  min_exposure_steps: 3
+  min_obstacle_exposure_rate: 0.35
+  min_episodes: 60
+  max_episodes: 260
+- name: hard_narrow_gap_forward
+  random_start: true
+  min_reset_clearance: 0.16
+  goal_tolerance: 0.18
+  safe_start_poses:
+  - x: -1.05
+    y: -1.25
+    z: 0.05
+    yaw: 1.57
+  - x: -1.05
+    y: 1.25
+    z: 0.05
+    yaw: -1.57
+  - x: -0.55
+    y: -1.75
+    z: 0.05
+    yaw: 1.57
+  - x: -0.55
+    y: 1.75
+    z: 0.05
+    yaw: -1.57
+  - x: -0.15
+    y: -1.25
+    z: 0.05
+    yaw: 1.57
+  - x: -0.15
+    y: 1.25
+    z: 0.05
+    yaw: -1.57
+  - x: 0.55
+    y: -1.75
+    z: 0.05
+    yaw: 1.57
+  - x: 0.55
+    y: 1.75
+    z: 0.05
+    yaw: -1.57
+  - x: 1.05
+    y: -1.25
+    z: 0.05
+    yaw: 1.57
+  - x: 1.05
+    y: 1.25
+    z: 0.05
+    yaw: -1.57
+  random_local_goal: true
+  local_goal_offsets:
+  - dx: 1.0
+    dy: 0.0
+    dyaw: 0.0
+  - dx: 1.2
+    dy: 0.0
+    dyaw: 0.0
+  - dx: 1.4
+    dy: 0.0
+    dyaw: 0.0
+  - dx: 1.0
+    dy: 0.08
+    dyaw: 0.0
+  - dx: 1.0
+    dy: -0.08
+    dyaw: 0.0
+  - dx: 1.2
+    dy: 0.08
+    dyaw: 0.0
+  - dx: 1.2
+    dy: -0.08
+    dyaw: 0.0
+  exposure_distance: 0.62
+  narrow_gap_clearance: 0.72
+  min_exposure_steps: 5
+  min_narrow_gap_steps: 4
+  min_obstacle_exposure_rate: 0.25
+  min_episodes: 80
+  max_episodes: 320
+- name: hard_gap_turns
+  random_start: true
+  min_reset_clearance: 0.16
+  goal_tolerance: 0.2
+  safe_start_poses:
+  - x: -1.05
+    y: -1.25
+    z: 0.05
+    yaw: 1.57
+  - x: -1.05
+    y: 1.25
+    z: 0.05
+    yaw: -1.57
+  - x: -0.55
+    y: -1.75
+    z: 0.05
+    yaw: 1.57
+  - x: -0.55
+    y: 1.75
+    z: 0.05
+    yaw: -1.57
+  - x: -0.15
+    y: -1.25
+    z: 0.05
+    yaw: 1.57
+  - x: -0.15
+    y: 1.25
+    z: 0.05
+    yaw: -1.57
+  - x: 0.55
+    y: -1.75
+    z: 0.05
+    yaw: 1.57
+  - x: 0.55
+    y: 1.75
+    z: 0.05
+    yaw: -1.57
+  - x: 1.05
+    y: -1.25
+    z: 0.05
+    yaw: 1.57
+  - x: 1.05
+    y: 1.25
+    z: 0.05
+    yaw: -1.57
+  - x: 1.65
+    y: -0.55
+    z: 0.05
+    yaw: 3.14
+  - x: 1.65
+    y: 0.55
+    z: 0.05
+    yaw: 3.14
+  random_local_goal: true
+  local_goal_offsets:
+  - dx: 1.0
+    dy: 0.25
+    dyaw: 0.0
+  - dx: 1.0
+    dy: -0.25
+    dyaw: 0.0
+  - dx: 1.0
+    dy: 0.35
+    dyaw: 0.0
+  - dx: 1.0
+    dy: -0.35
+    dyaw: 0.0
+  - dx: 1.2
+    dy: 0.25
+    dyaw: 0.0
+  - dx: 1.2
+    dy: -0.25
+    dyaw: 0.0
+  - dx: 1.2
+    dy: 0.35
+    dyaw: 0.0
+  - dx: 1.2
+    dy: -0.35
+    dyaw: 0.0
+  exposure_distance: 0.62
+  narrow_gap_clearance: 0.72
+  min_exposure_steps: 8
+  min_narrow_gap_steps: 4
+  min_obstacle_exposure_rate: 0.25
+  min_episodes: 80
+  max_episodes: 360
+- name: hard_random_gap_offsets
+  random_start: true
+  min_reset_clearance: 0.16
+  goal_tolerance: 0.22
+  random_local_goal: true
+  local_goal_offsets:
+  - dx: 0.8
+    dy: 0.0
+    dyaw: 0.0
+  - dx: 1.0
+    dy: 0.0
+    dyaw: 0.0
+  - dx: 1.2
+    dy: 0.0
+    dyaw: 0.0
+  - dx: 1.0
+    dy: 0.25
+    dyaw: 0.0
+  - dx: 1.0
+    dy: -0.25
+    dyaw: 0.0
+  - dx: 1.2
+    dy: 0.35
+    dyaw: 0.0
+  - dx: 1.2
+    dy: -0.35
+    dyaw: 0.0
+  exposure_distance: 0.62
+  narrow_gap_clearance: 0.72
+  min_exposure_steps: 6
+  min_narrow_gap_steps: 3
+  min_obstacle_exposure_rate: 0.25
+  min_episodes: 100
+  max_episodes: 420
+- name: hard_two_turn_sequences
+  random_start: true
+  min_reset_clearance: 0.16
+  goal_tolerance: 0.28
+  waypoint_tolerance: 0.3
+  waypoint_reward: 5.0
+  max_steps_per_episode: 320
+  safe_start_poses:
+  - x: -1.05
+    y: -1.25
+    z: 0.05
+    yaw: 1.57
+  - x: -1.05
+    y: 1.25
+    z: 0.05
+    yaw: -1.57
+  - x: -0.55
+    y: -1.75
+    z: 0.05
+    yaw: 1.57
+  - x: -0.55
+    y: 1.75
+    z: 0.05
+    yaw: -1.57
+  - x: -0.15
+    y: -1.25
+    z: 0.05
+    yaw: 1.57
+  - x: -0.15
+    y: 1.25
+    z: 0.05
+    yaw: -1.57
+  - x: 0.55
+    y: -1.75
+    z: 0.05
+    yaw: 1.57
+  - x: 0.55
+    y: 1.75
+    z: 0.05
+    yaw: -1.57
+  - x: 1.05
+    y: -1.25
+    z: 0.05
+    yaw: 1.57
+  - x: 1.05
+    y: 1.25
+    z: 0.05
+    yaw: -1.57
+  local_goal_sequences:
+  - - dx: 0.35
+      dy: 0.16
+      dyaw: 0.0
+    - dx: 0.72
+      dy: -0.12
+      dyaw: 0.0
+    - dx: 1.02
+      dy: 0.0
+      dyaw: 0.0
+  - - dx: 0.35
+      dy: -0.16
+      dyaw: 0.0
+    - dx: 0.72
+      dy: 0.12
+      dyaw: 0.0
+    - dx: 1.02
+      dy: 0.0
+      dyaw: 0.0
+  - - dx: 0.38
+      dy: 0.2
+      dyaw: 0.0
+    - dx: 0.76
+      dy: 0.02
+      dyaw: 0.0
+    - dx: 1.08
+      dy: -0.14
+      dyaw: 0.0
+  - - dx: 0.38
+      dy: -0.2
+      dyaw: 0.0
+    - dx: 0.76
+      dy: -0.02
+      dyaw: 0.0
+    - dx: 1.08
+      dy: 0.14
+      dyaw: 0.0
+  exposure_distance: 0.62
+  narrow_gap_clearance: 0.72
+  min_exposure_steps: 8
+  min_narrow_gap_steps: 4
+  min_waypoints_reached: 2
+  min_obstacle_exposure_rate: 0.2
+  min_episodes: 80
+  max_episodes: 320
+- name: hard_s_curve_sequences
+  random_start: true
+  min_reset_clearance: 0.16
+  goal_tolerance: 0.28
+  waypoint_tolerance: 0.3
+  waypoint_reward: 5.0
+  max_steps_per_episode: 360
+  safe_start_poses:
+  - x: -1.05
+    y: -1.25
+    z: 0.05
+    yaw: 1.57
+  - x: -1.05
+    y: 1.25
+    z: 0.05
+    yaw: -1.57
+  - x: -0.55
+    y: -1.75
+    z: 0.05
+    yaw: 1.57
+  - x: -0.55
+    y: 1.75
+    z: 0.05
+    yaw: -1.57
+  - x: -0.15
+    y: -1.25
+    z: 0.05
+    yaw: 1.57
+  - x: -0.15
+    y: 1.25
+    z: 0.05
+    yaw: -1.57
+  - x: 0.55
+    y: -1.75
+    z: 0.05
+    yaw: 1.57
+  - x: 0.55
+    y: 1.75
+    z: 0.05
+    yaw: -1.57
+  - x: 1.05
+    y: -1.25
+    z: 0.05
+    yaw: 1.57
+  - x: 1.05
+    y: 1.25
+    z: 0.05
+    yaw: -1.57
+  local_goal_sequences:
+  - - dx: 0.35
+      dy: 0.18
+      dyaw: 0.0
+    - dx: 0.7
+      dy: -0.16
+      dyaw: 0.0
+    - dx: 1.02
+      dy: 0.14
+      dyaw: 0.0
+    - dx: 1.28
+      dy: 0.0
+      dyaw: 0.0
+  - - dx: 0.35
+      dy: -0.18
+      dyaw: 0.0
+    - dx: 0.7
+      dy: 0.16
+      dyaw: 0.0
+    - dx: 1.02
+      dy: -0.14
+      dyaw: 0.0
+    - dx: 1.28
+      dy: 0.0
+      dyaw: 0.0
+  - - dx: 0.38
+      dy: 0.22
+      dyaw: 0.0
+    - dx: 0.76
+      dy: 0.02
+      dyaw: 0.0
+    - dx: 1.08
+      dy: -0.2
+      dyaw: 0.0
+    - dx: 1.32
+      dy: -0.04
+      dyaw: 0.0
+  - - dx: 0.38
+      dy: -0.22
+      dyaw: 0.0
+    - dx: 0.76
+      dy: -0.02
+      dyaw: 0.0
+    - dx: 1.08
+      dy: 0.2
+      dyaw: 0.0
+    - dx: 1.32
+      dy: 0.04
+      dyaw: 0.0
+  exposure_distance: 0.62
+  narrow_gap_clearance: 0.72
+  min_exposure_steps: 8
+  min_narrow_gap_steps: 4
+  min_waypoints_reached: 3
+  min_obstacle_exposure_rate: 0.2
+  min_episodes: 100
+  max_episodes: 420
+- name: hard_winding_sequences
+  random_start: true
+  min_reset_clearance: 0.16
+  goal_tolerance: 0.3
+  waypoint_tolerance: 0.32
+  waypoint_reward: 5.0
+  max_steps_per_episode: 420
+  safe_start_poses:
+  - x: -1.05
+    y: -1.25
+    z: 0.05
+    yaw: 1.57
+  - x: -1.05
+    y: 1.25
+    z: 0.05
+    yaw: -1.57
+  - x: -0.15
+    y: -1.25
+    z: 0.05
+    yaw: 1.57
+  - x: -0.15
+    y: 1.25
+    z: 0.05
+    yaw: -1.57
+  - x: 0.55
+    y: -1.75
+    z: 0.05
+    yaw: 1.57
+  - x: 0.55
+    y: 1.75
+    z: 0.05
+    yaw: -1.57
+  - x: 1.05
+    y: -1.25
+    z: 0.05
+    yaw: 1.57
+  - x: 1.05
+    y: 1.25
+    z: 0.05
+    yaw: -1.57
+  local_goal_sequences:
+  - - dx: 0.3
+      dy: 0.2
+      dyaw: 0.0
+    - dx: 0.62
+      dy: -0.14
+      dyaw: 0.0
+    - dx: 0.92
+      dy: -0.24
+      dyaw: 0.0
+    - dx: 1.22
+      dy: 0.1
+      dyaw: 0.0
+    - dx: 1.48
+      dy: 0.0
+      dyaw: 0.0
+  - - dx: 0.3
+      dy: -0.2
+      dyaw: 0.0
+    - dx: 0.62
+      dy: 0.14
+      dyaw: 0.0
+    - dx: 0.92
+      dy: 0.24
+      dyaw: 0.0
+    - dx: 1.22
+      dy: -0.1
+      dyaw: 0.0
+    - dx: 1.48
+      dy: 0.0
+      dyaw: 0.0
+  - - dx: 0.34
+      dy: 0.24
+      dyaw: 0.0
+    - dx: 0.68
+      dy: 0.22
+      dyaw: 0.0
+    - dx: 0.98
+      dy: -0.14
+      dyaw: 0.0
+    - dx: 1.28
+      dy: -0.24
+      dyaw: 0.0
+    - dx: 1.52
+      dy: 0.0
+      dyaw: 0.0
+  - - dx: 0.34
+      dy: -0.24
+      dyaw: 0.0
+    - dx: 0.68
+      dy: -0.22
+      dyaw: 0.0
+    - dx: 0.98
+      dy: 0.14
+      dyaw: 0.0
+    - dx: 1.28
+      dy: 0.24
+      dyaw: 0.0
+    - dx: 1.52
+      dy: 0.0
+      dyaw: 0.0
+  exposure_distance: 0.62
+  narrow_gap_clearance: 0.72
+  min_exposure_steps: 10
+  min_narrow_gap_steps: 5
+  min_waypoints_reached: 4
+  min_obstacle_exposure_rate: 0.2
+  min_episodes: 140
+  max_episodes: 560

@@ -1,0 +1,23 @@
+running egg_info
+writing ../../build/turtlebot3_drl_local_planner/turtlebot3_drl_local_planner.egg-info/PKG-INFO
+writing dependency_links to ../../build/turtlebot3_drl_local_planner/turtlebot3_drl_local_planner.egg-info/dependency_links.txt
+writing entry points to ../../build/turtlebot3_drl_local_planner/turtlebot3_drl_local_planner.egg-info/entry_points.txt
+writing requirements to ../../build/turtlebot3_drl_local_planner/turtlebot3_drl_local_planner.egg-info/requires.txt
+writing top-level names to ../../build/turtlebot3_drl_local_planner/turtlebot3_drl_local_planner.egg-info/top_level.txt
+reading manifest file '../../build/turtlebot3_drl_local_planner/turtlebot3_drl_local_planner.egg-info/SOURCES.txt'
+writing manifest file '../../build/turtlebot3_drl_local_planner/turtlebot3_drl_local_planner.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3_drl_local_planner-0.1.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/turtlebot3_drl_local_planner/turtlebot3_drl_local_planner.egg-info to /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3_drl_local_planner-0.1.0-py3.10.egg-info
+running install_scripts
+Installing drl_controller_node script to /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/turtlebot3_drl_local_planner
+Installing eval_policy script to /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/turtlebot3_drl_local_planner
+Installing eval_shadow_compare script to /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/turtlebot3_drl_local_planner
+Installing export_policy script to /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/turtlebot3_drl_local_planner
+Installing train_gap_sac script to /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/turtlebot3_drl_local_planner
+writing list of installed files to '/home/hug/tb3_sim_ws/build/turtlebot3_drl_local_planner/install.log'

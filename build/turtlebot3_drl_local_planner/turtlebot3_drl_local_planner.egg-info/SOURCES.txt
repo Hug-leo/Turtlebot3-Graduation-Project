@@ -2,6 +2,13 @@ README.md
 package.xml
 setup.cfg
 setup.py
+../../build/turtlebot3_drl_local_planner/turtlebot3_drl_local_planner.egg-info/PKG-INFO
+../../build/turtlebot3_drl_local_planner/turtlebot3_drl_local_planner.egg-info/SOURCES.txt
+../../build/turtlebot3_drl_local_planner/turtlebot3_drl_local_planner.egg-info/dependency_links.txt
+../../build/turtlebot3_drl_local_planner/turtlebot3_drl_local_planner.egg-info/entry_points.txt
+../../build/turtlebot3_drl_local_planner/turtlebot3_drl_local_planner.egg-info/requires.txt
+../../build/turtlebot3_drl_local_planner/turtlebot3_drl_local_planner.egg-info/top_level.txt
+../../build/turtlebot3_drl_local_planner/turtlebot3_drl_local_planner.egg-info/zip-safe
 config/gap_sac.yaml
 launch/drl_controller.launch.py
 launch/drl_nav2_replacement.launch.py

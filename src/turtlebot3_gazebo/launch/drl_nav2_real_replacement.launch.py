@@ -95,8 +95,8 @@ def generate_launch_description():
                 description="When true, DRL publishes /cmd_vel and Nav2 is remapped to /cmd_vel_nav2.",
             ),
             DeclareLaunchArgument("lookahead_distance_m", default_value="0.4"),
-            DeclareLaunchArgument("safety_stop_distance", default_value="0.18"),
-            DeclareLaunchArgument("goal_stop_distance_m", default_value="0.35"),
+            DeclareLaunchArgument("safety_stop_distance", default_value="0.15"),
+            DeclareLaunchArgument("goal_stop_distance_m", default_value="0.08"),
             Node(
                 package="hls_lfcd_lds_driver",
                 executable="hlds_laser_publisher",
