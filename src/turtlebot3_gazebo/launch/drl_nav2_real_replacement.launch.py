@@ -97,6 +97,13 @@ def generate_launch_description():
             DeclareLaunchArgument("lookahead_distance_m", default_value="0.4"),
             DeclareLaunchArgument("safety_stop_distance", default_value="0.15"),
             DeclareLaunchArgument("goal_stop_distance_m", default_value="0.08"),
+            DeclareLaunchArgument("final_orientation_enabled", default_value="true"),
+            DeclareLaunchArgument("final_orientation_distance_m", default_value="0.12"),
+            DeclareLaunchArgument("final_yaw_tolerance_rad", default_value="0.08"),
+            DeclareLaunchArgument("final_yaw_gain", default_value="1.2"),
+            DeclareLaunchArgument("final_yaw_min_angular_velocity", default_value="0.08"),
+            DeclareLaunchArgument("final_yaw_max_angular_velocity", default_value="0.45"),
+            DeclareLaunchArgument("final_orientation_timeout_sec", default_value="10.0"),
             Node(
                 package="hls_lfcd_lds_driver",
                 executable="hlds_laser_publisher",
@@ -176,6 +183,25 @@ def generate_launch_description():
                         "safety_stop_enabled": True,
                         "safety_stop_distance": LaunchConfiguration("safety_stop_distance"),
                         "goal_stop_distance_m": LaunchConfiguration("goal_stop_distance_m"),
+                        "final_orientation_enabled": LaunchConfiguration(
+                            "final_orientation_enabled"
+                        ),
+                        "final_orientation_distance_m": LaunchConfiguration(
+                            "final_orientation_distance_m"
+                        ),
+                        "final_yaw_tolerance_rad": LaunchConfiguration(
+                            "final_yaw_tolerance_rad"
+                        ),
+                        "final_yaw_gain": LaunchConfiguration("final_yaw_gain"),
+                        "final_yaw_min_angular_velocity": LaunchConfiguration(
+                            "final_yaw_min_angular_velocity"
+                        ),
+                        "final_yaw_max_angular_velocity": LaunchConfiguration(
+                            "final_yaw_max_angular_velocity"
+                        ),
+                        "final_orientation_timeout_sec": LaunchConfiguration(
+                            "final_orientation_timeout_sec"
+                        ),
                         "speed_governor_enabled": True,
                         "recovery_enabled": True,
                         "narrow_passage_enabled": True,

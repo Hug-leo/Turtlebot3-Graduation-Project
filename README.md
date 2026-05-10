@@ -28,9 +28,10 @@ tb3_sim_ws/
 - Gazebo SLAM/Nav2 baseline is available through `src/turtlebot3_gazebo`.
 - DRL training and bypass replacement are available through `src/turtlebot3_drl_local_planner`.
 - Native Nav2 plugin work exists in `src/turtlebot3_drl_nav2_controller`, but the active direction is currently better policy training for bypass replacement.
-- DRL has completed local-goal and hard-gap training stages in Gazebo.
-- Hard S-curve and winding-path training still need more work.
-- Real robot DRL deployment is prepared conceptually, but not validated as direct control yet.
+- DRL has completed local-goal, hard-gap, S-curve, and winding-path curriculum stages in Gazebo.
+- The current best simulation deployment model is `runs/gap_sac_20260506_230839/deployment_checkpoint.pt`.
+- The DRL bypass controller now includes deterministic final-yaw alignment so the robot can rotate to match the RViz goal orientation after reaching the goal position.
+- Real robot DRL deployment launch support exists, but direct real-robot DRL control is not validated yet.
 
 ## Important DRL Files
 
@@ -49,10 +50,11 @@ src/turtlebot3_drl_local_planner/turtlebot3_drl_local_planner/nodes/drl_controll
 ```text
 runs/gap_sac_20260502_145623/deployment_checkpoint.pt
 runs/gap_sac_20260503_143312/deployment_checkpoint.pt
-runs/gap_sac_20260503_164614/stage_summary.csv
+runs/gap_sac_20260506_230839/deployment_checkpoint.pt
+runs/gap_sac_20260506_230839/stage_summary.csv
 ```
 
-The run `gap_sac_20260503_164614` failed at `hard_s_curve_sequences` by timeout, not collision. This means the next training work should continue staged winding-path training.
+The run `gap_sac_20260506_230839` completed `hard_winding_sequences` with 140/140 successes, 0 collisions, 0 timeouts, and average final goal distance of about 0.115 m. This is the current checkpoint to use for simulation validation and real-robot shadow preparation.
 
 ## Build
 
@@ -73,14 +75,35 @@ source install/setup.bash
 ros2 launch turtlebot3_drl_local_planner train_gap_sac.launch.py \
   episodes:=1000 \
   curriculum:=true \
-  start_stage:=hard_two_turn_sequences \
-  resume_checkpoint:=/home/hug/tb3_sim_ws/runs/gap_sac_20260503_164614/best_checkpoint.pt
+  start_stage:=hard_winding_sequences \
+  resume_checkpoint:=/home/hug/tb3_sim_ws/runs/gap_sac_20260506_230839/deployment_checkpoint.pt
 ```
 
-Fallback checkpoint if the latest failed-stage checkpoint is unstable:
+Current deployment checkpoint:
 
 ```text
-/home/hug/tb3_sim_ws/runs/gap_sac_20260503_143312/deployment_checkpoint.pt
+/home/hug/tb3_sim_ws/runs/gap_sac_20260506_230839/deployment_checkpoint.pt
+```
+
+Simulation bypass validation command:
+
+```bash
+cd ~/tb3_sim_ws
+source /opt/ros/humble/setup.bash
+source install/setup.bash
+
+ros2 launch turtlebot3_drl_local_planner drl_nav2_replacement.launch.py \
+  map:=$HOME/maps/my_map.yaml \
+  policy_checkpoint:=/home/hug/tb3_sim_ws/runs/gap_sac_20260506_230839/deployment_checkpoint.pt
+```
+
+Final orientation can be tuned without retraining because it is controller-side logic:
+
+```text
+final_orientation_enabled:=true
+final_orientation_distance_m:=0.12
+final_yaw_tolerance_rad:=0.08
+final_yaw_gain:=1.2
 ```
 
 ## Documentation
@@ -106,5 +129,5 @@ Do not claim the DRL policy fully replaces Nav2 on the real robot yet.
 Accurate current claim:
 
 ```text
-The project has a working Gazebo/Nav2 baseline, a Gazebo-trained DRL local planner candidate, successful local/hard-gap simulation results, and a prepared path for future real-robot shadow validation.
+The project has a working Gazebo/Nav2 baseline, a Gazebo-trained DRL local planner candidate, successful local/hard-gap/S-curve/winding simulation curriculum results, runtime final-yaw alignment, and a prepared path for future real-robot shadow validation.
 ```

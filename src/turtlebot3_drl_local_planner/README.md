@@ -12,8 +12,9 @@ The goal here is to train and evaluate a DRL local planner in Gazebo, then later
 - Nav2 works with saved maps.
 - RViz goal execution works.
 - DRL local planner training and bypass simulation tests are active in this isolated package.
-- Local-goal and hard-gap curriculum stages have completed in Gazebo.
-- Difficult S-curve and winding-path stages still need more training.
+- Local-goal, hard-gap, S-curve, and winding-path curriculum stages have completed in Gazebo.
+- Current deployment checkpoint: `/home/hug/tb3_sim_ws/runs/gap_sac_20260506_230839/deployment_checkpoint.pt`.
+- Runtime final-orientation alignment is implemented so the robot can rotate in place to match the RViz goal yaw after reaching the goal position.
 - Real-robot DRL direct replacement is not validated yet.
 
 ## Safety Principle
@@ -247,6 +248,20 @@ publish_directly_to_cmd_vel:=false
 use_fixed_goal_when_missing:=false
 ```
 
+Final orientation launch arguments:
+
+```text
+final_orientation_enabled:=true
+final_orientation_distance_m:=0.12
+final_yaw_tolerance_rad:=0.08
+final_yaw_gain:=1.2
+final_yaw_min_angular_velocity:=0.08
+final_yaw_max_angular_velocity:=0.45
+final_orientation_timeout_sec:=10.0
+```
+
+These final-orientation parameters are controller/runtime parameters. They do not change the neural network input, actor/critic architecture, replay data, or reward function, so changing them does not require retraining.
+
 ## Comparison Metrics Against Nav2
 
 Use the same saved map, start pose, and goal set for both Nav2 and DRL:
@@ -262,7 +277,7 @@ Use the same saved map, start pose, and goal set for both Nav2 and DRL:
 
 ## Future Work
 
-- Continue hard two-turn, S-curve, and winding-path curriculum training.
+- Continue harder map-aware and real-map-like curriculum training if the policy fails on new cluttered routes.
 - Add map-aware safe pose and goal sampling for harder warehouse-style routes.
 - Keep the bypass launch as the main DRL replacement validation path for now.
 - Run real-robot shadow-mode validation before any direct DRL control.
@@ -270,11 +285,18 @@ Use the same saved map, start pose, and goal set for both Nav2 and DRL:
 
 ## Maintenance Log
 
+### 2026-05-10
+
+- Updated current best model to `/home/hug/tb3_sim_ws/runs/gap_sac_20260506_230839/deployment_checkpoint.pt`.
+- Recorded latest Gazebo result: `hard_winding_sequences` completed with 140/140 successes, 0 collisions, 0 timeouts, and average final distance about 0.115 m.
+- Added runtime final-orientation alignment parameters for matching RViz goal yaw after reaching the goal position.
+- Real-robot DRL direct control remains unvalidated; start with shadow mode.
+
 ### 2026-05-03
 
 - Completed documentation update for thesis/report preparation.
 - Recorded current DRL status: Gazebo training completed for local and hard-gap stages, with successful simulation-stage bypass tests.
-- Recorded limitation: hard S-curve/winding routes still fail by timeout and need more curriculum training.
+- Historical limitation at that date: hard S-curve/winding routes still failed by timeout and needed more curriculum training. This was superseded by the 2026-05-10 update above.
 - Real-robot DRL deployment remains future work and must start in shadow mode.
 
 ### 2026-04-28

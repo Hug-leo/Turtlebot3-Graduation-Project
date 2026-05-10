@@ -1,6 +1,6 @@
 # TurtleBot3 Gazebo SLAM/Nav2 Baseline
 
-This package is the Gazebo-side baseline for the warehouse AMR project using a TurtleBot3 Waffle Pi. The real robot pipeline already runs ROS 2, SLAM, Nav2, and autonomous warehouse navigation. This package keeps the simulation path stable before replacing or extending the Nav2 local controller with a future DRL policy.
+This package is the Gazebo-side baseline for the warehouse AMR project using a TurtleBot3 Waffle Pi. The real robot pipeline already runs ROS 2, SLAM, Nav2, and autonomous warehouse navigation. This package keeps the simulation path stable while the DRL local-planner bypass is trained and evaluated.
 
 ## Current Goal
 
@@ -14,7 +14,11 @@ The immediate goal is not DRL. The immediate goal is to make simulation behave l
 6. Run Nav2 with AMCL and the default local controller.
 7. Send a goal in RViz and verify the robot navigates.
 
-After this baseline is stable, DRL local planning can be developed and evaluated against a known-good Nav2 stack.
+After this baseline is stable, DRL local planning is evaluated against a known-good Nav2 stack. The current best DRL simulation checkpoint is:
+
+```text
+/home/hug/tb3_sim_ws/runs/gap_sac_20260506_230839/deployment_checkpoint.pt
+```
 
 ## Package Structure
 
@@ -358,7 +362,7 @@ The YAML path and image path must be valid from the machine running Nav2.
 
 ## Future DRL Local Planner
 
-The future DRL work should replace only the local planning/controller layer after the simulation baseline is stable.
+The DRL work targets only the local planning/controller layer. Nav2 still handles map loading, AMCL, global planning, BT navigation, and user goals.
 
 Keep these Nav2 components:
 
@@ -398,10 +402,12 @@ angular velocity w
 
 Possible implementation paths:
 
-1. A separate ROS 2 node publishing `/cmd_vel`, first used in shadow mode for logging and safety validation.
-2. A proper Nav2 controller plugin implementing `nav2_core::Controller`.
+1. Active path: a separate ROS 2 node publishing `/cmd_vel` in bypass mode, first used in shadow mode for logging and safety validation.
+2. Paused path: a proper Nav2 controller plugin implementing `nav2_core::Controller`.
 
 Training should happen in Gazebo first. Real-robot deployment must keep the default Nav2 controller available as a fallback and must include safety limits for velocity, obstacle distance, watchdog timeout, and emergency stop behavior.
+
+Current DRL runtime behavior includes final-orientation alignment. After the robot reaches the final goal position, the controller can rotate in place to match the RViz goal yaw before publishing a final zero command.
 
 ## Maintenance Notes
 

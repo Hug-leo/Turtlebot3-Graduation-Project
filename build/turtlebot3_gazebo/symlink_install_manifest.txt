@@ -134,6 +134,7 @@
 /home/hug/tb3_sim_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//urdf/turtlebot3_waffle.urdf
 /home/hug/tb3_sim_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//urdf/turtlebot3_waffle_pi.urdf
 /home/hug/tb3_sim_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/empty_world.world
+/home/hug/tb3_sim_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/mini_warehouse.world
 /home/hug/tb3_sim_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_autorace_2020.world
 /home/hug/tb3_sim_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_dqn_stage1.world
 /home/hug/tb3_sim_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_dqn_stage2.world

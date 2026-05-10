@@ -109,6 +109,13 @@ controller:
   narrow_passage_linear_velocity: 0.025
   narrow_passage_centering_gain: 1.4
   narrow_passage_max_angular_velocity: 0.45
+  final_orientation_enabled: true
+  final_orientation_distance_m: 0.12
+  final_yaw_tolerance_rad: 0.08
+  final_yaw_gain: 1.2
+  final_yaw_min_angular_velocity: 0.08
+  final_yaw_max_angular_velocity: 0.45
+  final_orientation_timeout_sec: 10.0
 
 training:
   mode: my_map_hard_local_path_following

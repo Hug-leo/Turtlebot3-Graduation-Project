@@ -1,7 +1,11 @@
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.substitutions import EnvironmentVariable, LaunchConfiguration, PathJoinSubstitution
+from launch.substitutions import (
+    EnvironmentVariable,
+    LaunchConfiguration,
+    PathJoinSubstitution,
+)
 from launch_ros.substitutions import FindPackageShare
 
 
@@ -13,9 +17,9 @@ def generate_launch_description():
         [FindPackageShare("turtlebot3_gazebo"), "config", "nav2_sim_params.yaml"]
     )
     default_world = PathJoinSubstitution(
-        [FindPackageShare("turtlebot3_gazebo"), "worlds", "turtlebot3_world.world"]
+        [FindPackageShare("turtlebot3_gazebo"), "worlds", "mini_warehouse.world"]
     )
-    default_map = [EnvironmentVariable("HOME"), "/maps/my_map.yaml"]
+    default_map = [EnvironmentVariable("HOME"), "/maps/mini_warehouse.yaml"]
 
     return LaunchDescription(
         [
@@ -40,14 +44,37 @@ def generate_launch_description():
             DeclareLaunchArgument("recovery_duration_sec", default_value="0.8"),
             DeclareLaunchArgument("narrow_passage_enabled", default_value="true"),
             DeclareLaunchArgument("narrow_passage_clearance_m", default_value="0.42"),
-            DeclareLaunchArgument("narrow_passage_front_clearance_m", default_value="0.24"),
-            DeclareLaunchArgument("narrow_passage_linear_velocity", default_value="0.025"),
+            DeclareLaunchArgument(
+                "narrow_passage_front_clearance_m", default_value="0.24"
+            ),
+            DeclareLaunchArgument(
+                "narrow_passage_linear_velocity", default_value="0.025"
+            ),
             DeclareLaunchArgument("narrow_passage_centering_gain", default_value="1.4"),
-            DeclareLaunchArgument("narrow_passage_max_angular_velocity", default_value="0.45"),
+            DeclareLaunchArgument(
+                "narrow_passage_max_angular_velocity", default_value="0.45"
+            ),
+            DeclareLaunchArgument("final_orientation_enabled", default_value="true"),
+            DeclareLaunchArgument("final_orientation_distance_m", default_value="0.12"),
+            DeclareLaunchArgument("final_yaw_tolerance_rad", default_value="0.08"),
+            DeclareLaunchArgument("final_yaw_gain", default_value="1.2"),
+            DeclareLaunchArgument(
+                "final_yaw_min_angular_velocity", default_value="0.08"
+            ),
+            DeclareLaunchArgument(
+                "final_yaw_max_angular_velocity", default_value="0.45"
+            ),
+            DeclareLaunchArgument(
+                "final_orientation_timeout_sec", default_value="10.0"
+            ),
             IncludeLaunchDescription(
                 PythonLaunchDescriptionSource(
                     PathJoinSubstitution(
-                        [FindPackageShare("turtlebot3_gazebo"), "launch", "sim_nav2.launch.py"]
+                        [
+                            FindPackageShare("turtlebot3_gazebo"),
+                            "launch",
+                            "sim_nav2.launch.py",
+                        ]
                     )
                 ),
                 launch_arguments={
@@ -77,22 +104,65 @@ def generate_launch_description():
                     "lookahead_distance_m": LaunchConfiguration("lookahead_distance_m"),
                     "prefer_plan_goal": "true",
                     "safety_stop_distance": LaunchConfiguration("safety_stop_distance"),
-                    "heading_guard_enabled": LaunchConfiguration("heading_guard_enabled"),
+                    "heading_guard_enabled": LaunchConfiguration(
+                        "heading_guard_enabled"
+                    ),
                     "goal_stop_distance_m": LaunchConfiguration("goal_stop_distance_m"),
-                    "speed_governor_enabled": LaunchConfiguration("speed_governor_enabled"),
-                    "speed_slow_distance_m": LaunchConfiguration("speed_slow_distance_m"),
+                    "speed_governor_enabled": LaunchConfiguration(
+                        "speed_governor_enabled"
+                    ),
+                    "speed_slow_distance_m": LaunchConfiguration(
+                        "speed_slow_distance_m"
+                    ),
                     "speed_min_distance_m": LaunchConfiguration("speed_min_distance_m"),
                     "speed_min_scale": LaunchConfiguration("speed_min_scale"),
                     "recovery_enabled": LaunchConfiguration("recovery_enabled"),
-                    "recovery_linear_velocity": LaunchConfiguration("recovery_linear_velocity"),
-                    "recovery_angular_velocity": LaunchConfiguration("recovery_angular_velocity"),
-                    "recovery_duration_sec": LaunchConfiguration("recovery_duration_sec"),
-                    "narrow_passage_enabled": LaunchConfiguration("narrow_passage_enabled"),
-                    "narrow_passage_clearance_m": LaunchConfiguration("narrow_passage_clearance_m"),
-                    "narrow_passage_front_clearance_m": LaunchConfiguration("narrow_passage_front_clearance_m"),
-                    "narrow_passage_linear_velocity": LaunchConfiguration("narrow_passage_linear_velocity"),
-                    "narrow_passage_centering_gain": LaunchConfiguration("narrow_passage_centering_gain"),
-                    "narrow_passage_max_angular_velocity": LaunchConfiguration("narrow_passage_max_angular_velocity"),
+                    "recovery_linear_velocity": LaunchConfiguration(
+                        "recovery_linear_velocity"
+                    ),
+                    "recovery_angular_velocity": LaunchConfiguration(
+                        "recovery_angular_velocity"
+                    ),
+                    "recovery_duration_sec": LaunchConfiguration(
+                        "recovery_duration_sec"
+                    ),
+                    "narrow_passage_enabled": LaunchConfiguration(
+                        "narrow_passage_enabled"
+                    ),
+                    "narrow_passage_clearance_m": LaunchConfiguration(
+                        "narrow_passage_clearance_m"
+                    ),
+                    "narrow_passage_front_clearance_m": LaunchConfiguration(
+                        "narrow_passage_front_clearance_m"
+                    ),
+                    "narrow_passage_linear_velocity": LaunchConfiguration(
+                        "narrow_passage_linear_velocity"
+                    ),
+                    "narrow_passage_centering_gain": LaunchConfiguration(
+                        "narrow_passage_centering_gain"
+                    ),
+                    "narrow_passage_max_angular_velocity": LaunchConfiguration(
+                        "narrow_passage_max_angular_velocity"
+                    ),
+                    "final_orientation_enabled": LaunchConfiguration(
+                        "final_orientation_enabled"
+                    ),
+                    "final_orientation_distance_m": LaunchConfiguration(
+                        "final_orientation_distance_m"
+                    ),
+                    "final_yaw_tolerance_rad": LaunchConfiguration(
+                        "final_yaw_tolerance_rad"
+                    ),
+                    "final_yaw_gain": LaunchConfiguration("final_yaw_gain"),
+                    "final_yaw_min_angular_velocity": LaunchConfiguration(
+                        "final_yaw_min_angular_velocity"
+                    ),
+                    "final_yaw_max_angular_velocity": LaunchConfiguration(
+                        "final_yaw_max_angular_velocity"
+                    ),
+                    "final_orientation_timeout_sec": LaunchConfiguration(
+                        "final_orientation_timeout_sec"
+                    ),
                 }.items(),
             ),
         ]

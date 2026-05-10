@@ -94,6 +94,13 @@ class DRLControllerNode(Node):
             "narrow_passage_max_angular_velocity",
             controller_cfg.get("narrow_passage_max_angular_velocity", 0.45),
         )
+        self.declare_parameter("final_orientation_enabled", controller_cfg.get("final_orientation_enabled", True))
+        self.declare_parameter("final_orientation_distance_m", controller_cfg.get("final_orientation_distance_m", 0.12))
+        self.declare_parameter("final_yaw_tolerance_rad", controller_cfg.get("final_yaw_tolerance_rad", 0.08))
+        self.declare_parameter("final_yaw_gain", controller_cfg.get("final_yaw_gain", 1.2))
+        self.declare_parameter("final_yaw_min_angular_velocity", controller_cfg.get("final_yaw_min_angular_velocity", 0.08))
+        self.declare_parameter("final_yaw_max_angular_velocity", controller_cfg.get("final_yaw_max_angular_velocity", 0.45))
+        self.declare_parameter("final_orientation_timeout_sec", controller_cfg.get("final_orientation_timeout_sec", 10.0))
         self.declare_parameter("debug_selected_goal_topic", "/drl_selected_goal")
         self.declare_parameter("debug_status_topic", "/drl_controller_debug")
 
@@ -114,6 +121,10 @@ class DRLControllerNode(Node):
         self._warned_tf_unavailable = False
         self._recovery_until = 0.0
         self._recovery_turn_sign = 1.0
+        self._final_orientation_started_at = None
+        self._warned_final_orientation_timeout = False
+        self._last_final_goal_distance = math.inf
+        self._last_final_yaw_error = math.inf
         self.controller_state = "idle"
         self.policy = None
         self.tf_buffer = Buffer()
@@ -171,17 +182,98 @@ class DRLControllerNode(Node):
         pose.header.frame_id = str(self.get_parameter("fixed_frame").value)
         pose.pose.position.x = float(self.get_parameter("fixed_goal_x").value)
         pose.pose.position.y = float(self.get_parameter("fixed_goal_y").value)
-        pose.pose.orientation.w = 1.0
+        yaw = float(self.get_parameter("fixed_goal_yaw").value)
+        pose.pose.orientation.z = math.sin(0.5 * yaw)
+        pose.pose.orientation.w = math.cos(0.5 * yaw)
         return pose
 
     def _publish_zero(self):
         self.cmd_pub.publish(stamp_twist_zero(Twist()))
+
+    def _robot_pose_in_fixed_frame(self):
+        fixed_frame = str(self.get_parameter("fixed_frame").value)
+        base_frame = str(self.get_parameter("base_frame").value)
+        try:
+            transform = self.tf_buffer.lookup_transform(fixed_frame, base_frame, Time())
+        except TransformException:
+            if self.latest_odom is None:
+                return None
+            odom_frame = self.latest_odom.header.frame_id or ""
+            if odom_frame != fixed_frame:
+                return None
+            pose = self.latest_odom.pose.pose
+            yaw = quaternion_to_yaw(
+                pose.orientation.x,
+                pose.orientation.y,
+                pose.orientation.z,
+                pose.orientation.w,
+            )
+            return float(pose.position.x), float(pose.position.y), float(yaw)
+        yaw = quaternion_to_yaw(
+            transform.transform.rotation.x,
+            transform.transform.rotation.y,
+            transform.transform.rotation.z,
+            transform.transform.rotation.w,
+        )
+        return (
+            float(transform.transform.translation.x),
+            float(transform.transform.translation.y),
+            float(yaw),
+        )
 
     def _pose_distance_to_robot(self, pose) -> float:
         if self.latest_odom is None:
             return math.inf
         robot = self.latest_odom.pose.pose.position
         return math.hypot(float(pose.position.x) - float(robot.x), float(pose.position.y) - float(robot.y))
+
+    def _final_goal_pose(self):
+        if self.latest_goal is not None:
+            return self.latest_goal
+        if self.latest_plan is not None and self.latest_plan.poses:
+            return self.latest_plan.poses[-1]
+        return None
+
+    def _final_goal_status(self):
+        final_goal = self._final_goal_pose()
+        robot_pose = self._robot_pose_in_fixed_frame()
+        if final_goal is None or robot_pose is None:
+            return None
+        final_xy = self._pose_to_fixed_xy(final_goal)
+        if final_xy is None:
+            return None
+        robot_x, robot_y, robot_yaw = robot_pose
+        distance = math.hypot(final_xy[0] - robot_x, final_xy[1] - robot_y)
+        desired_yaw = quaternion_to_yaw(
+            final_goal.pose.orientation.x,
+            final_goal.pose.orientation.y,
+            final_goal.pose.orientation.z,
+            final_goal.pose.orientation.w,
+        )
+        yaw_error = self._normalize_angle(desired_yaw - robot_yaw)
+        return distance, yaw_error
+
+    def _pose_to_fixed_xy(self, stamped_pose):
+        source_frame = stamped_pose.header.frame_id or str(self.get_parameter("fixed_frame").value)
+        fixed_frame = str(self.get_parameter("fixed_frame").value)
+        if source_frame == fixed_frame:
+            return float(stamped_pose.pose.position.x), float(stamped_pose.pose.position.y)
+        try:
+            transform = self.tf_buffer.lookup_transform(fixed_frame, source_frame, Time())
+        except TransformException:
+            return None
+
+        yaw = quaternion_to_yaw(
+            transform.transform.rotation.x,
+            transform.transform.rotation.y,
+            transform.transform.rotation.z,
+            transform.transform.rotation.w,
+        )
+        x = float(stamped_pose.pose.position.x)
+        y = float(stamped_pose.pose.position.y)
+        tx = float(transform.transform.translation.x)
+        ty = float(transform.transform.translation.y)
+        return math.cos(yaw) * x - math.sin(yaw) * y + tx, math.sin(yaw) * x + math.cos(yaw) * y + ty
 
     def _pose_to_base_xy(self, stamped_pose):
         source_frame = stamped_pose.header.frame_id or str(self.get_parameter("fixed_frame").value)
@@ -263,6 +355,8 @@ class DRLControllerNode(Node):
             f"target_y={self.selected_goal.position.y:.3f} "
             f"target_distance={distance:.3f} "
             f"target_heading={heading:.3f} "
+            f"final_goal_distance={self._last_final_goal_distance:.3f} "
+            f"final_yaw_error={self._last_final_yaw_error:.3f} "
             f"nearest_obstacle={nearest_distance:.3f} "
             f"controller_state={self.controller_state} "
             f"safety_stop={str(bool(safety_stop_active)).lower()}"
@@ -286,10 +380,6 @@ class DRLControllerNode(Node):
             if not self._warned_missing_inputs:
                 self.get_logger().warn("Waiting for /scan, /odom, and a goal before publishing DRL velocity.")
                 self._warned_missing_inputs = True
-            self._publish_zero()
-            return
-        if self._selected_goal_reached():
-            self.controller_state = "goal_stop"
             self._publish_zero()
             return
         state, nearest_distance, nearest_angle = self._build_state(goal, self.selected_goal_base_xy)
@@ -316,6 +406,17 @@ class DRLControllerNode(Node):
                     self._publish_zero()
                 self._publish_debug(nearest_distance, True)
                 return
+        final_orientation_action = self._final_orientation_action()
+        if final_orientation_action is not None:
+            self.cmd_pub.publish(final_orientation_action)
+            self._publish_debug(nearest_distance, False)
+            return
+        if self._selected_goal_reached():
+            self.controller_state = "goal_stop"
+            self._reset_final_orientation_state()
+            self._publish_zero()
+            return
+        self._reset_final_orientation_state()
         if self.policy is None:
             self._publish_debug(nearest_distance, False)
             self._publish_zero()
@@ -342,6 +443,56 @@ class DRLControllerNode(Node):
             return False
         distance = math.hypot(self.selected_goal_base_xy[0], self.selected_goal_base_xy[1])
         return distance <= float(self.get_parameter("goal_stop_distance_m").value)
+
+    def _final_orientation_action(self):
+        self._last_final_goal_distance = math.inf
+        self._last_final_yaw_error = math.inf
+        if not bool(self.get_parameter("final_orientation_enabled").value):
+            return None
+        status = self._final_goal_status()
+        if status is None:
+            return None
+        distance, yaw_error = status
+        self._last_final_goal_distance = distance
+        self._last_final_yaw_error = yaw_error
+        if distance > float(self.get_parameter("final_orientation_distance_m").value):
+            return None
+
+        timeout = max(float(self.get_parameter("final_orientation_timeout_sec").value), 0.0)
+        now = time.monotonic()
+        if self._final_orientation_started_at is None:
+            self._final_orientation_started_at = now
+            self._warned_final_orientation_timeout = False
+        elif timeout > 0.0 and now - self._final_orientation_started_at > timeout:
+            self.controller_state = "final_goal_stop"
+            if not self._warned_final_orientation_timeout:
+                self.get_logger().warn(
+                    f"Final orientation timeout: yaw_error={yaw_error:.3f} rad, distance={distance:.3f} m."
+                )
+                self._warned_final_orientation_timeout = True
+            return stamp_twist_zero(Twist())
+
+        if abs(yaw_error) <= float(self.get_parameter("final_yaw_tolerance_rad").value):
+            self.controller_state = "final_goal_stop"
+            return stamp_twist_zero(Twist())
+
+        self.controller_state = "final_orientation"
+        return self._build_final_orientation_twist(yaw_error)
+
+    def _reset_final_orientation_state(self) -> None:
+        self._final_orientation_started_at = None
+        self._warned_final_orientation_timeout = False
+
+    def _build_final_orientation_twist(self, yaw_error: float) -> Twist:
+        twist = Twist()
+        gain = float(self.get_parameter("final_yaw_gain").value)
+        min_angular = abs(float(self.get_parameter("final_yaw_min_angular_velocity").value))
+        max_angular = abs(float(self.get_parameter("final_yaw_max_angular_velocity").value))
+        angular = float(np.clip(gain * yaw_error, -max_angular, max_angular))
+        if abs(angular) < min_angular:
+            angular = math.copysign(min_angular, yaw_error)
+        twist.angular.z = angular
+        return twist
 
     def _apply_heading_guard(self, action, nearest_distance: float):
         if not bool(self.get_parameter("heading_guard_enabled").value):

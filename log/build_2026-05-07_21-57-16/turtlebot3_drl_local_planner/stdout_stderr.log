@@ -1,0 +1,71 @@
+running develop
+Removing /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3-drl-local-planner.egg-link (link to .)
+running egg_info
+writing ../../build/turtlebot3_drl_local_planner/turtlebot3_drl_local_planner.egg-info/PKG-INFO
+writing dependency_links to ../../build/turtlebot3_drl_local_planner/turtlebot3_drl_local_planner.egg-info/dependency_links.txt
+writing entry points to ../../build/turtlebot3_drl_local_planner/turtlebot3_drl_local_planner.egg-info/entry_points.txt
+writing requirements to ../../build/turtlebot3_drl_local_planner/turtlebot3_drl_local_planner.egg-info/requires.txt
+writing top-level names to ../../build/turtlebot3_drl_local_planner/turtlebot3_drl_local_planner.egg-info/top_level.txt
+reading manifest file '../../build/turtlebot3_drl_local_planner/turtlebot3_drl_local_planner.egg-info/SOURCES.txt'
+writing manifest file '../../build/turtlebot3_drl_local_planner/turtlebot3_drl_local_planner.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+creating /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3_drl_local_planner
+creating /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3_drl_local_planner/agents
+copying /home/hug/tb3_sim_ws/build/turtlebot3_drl_local_planner/build/lib/turtlebot3_drl_local_planner/agents/prioritized_replay.py -> /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3_drl_local_planner/agents
+copying /home/hug/tb3_sim_ws/build/turtlebot3_drl_local_planner/build/lib/turtlebot3_drl_local_planner/agents/networks.py -> /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3_drl_local_planner/agents
+copying /home/hug/tb3_sim_ws/build/turtlebot3_drl_local_planner/build/lib/turtlebot3_drl_local_planner/agents/__init__.py -> /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3_drl_local_planner/agents
+copying /home/hug/tb3_sim_ws/build/turtlebot3_drl_local_planner/build/lib/turtlebot3_drl_local_planner/agents/gap_sac.py -> /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3_drl_local_planner/agents
+creating /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3_drl_local_planner/envs
+copying /home/hug/tb3_sim_ws/build/turtlebot3_drl_local_planner/build/lib/turtlebot3_drl_local_planner/envs/gazebo_nav_env.py -> /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3_drl_local_planner/envs
+copying /home/hug/tb3_sim_ws/build/turtlebot3_drl_local_planner/build/lib/turtlebot3_drl_local_planner/envs/__init__.py -> /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3_drl_local_planner/envs
+copying /home/hug/tb3_sim_ws/build/turtlebot3_drl_local_planner/build/lib/turtlebot3_drl_local_planner/__init__.py -> /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3_drl_local_planner
+creating /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3_drl_local_planner/nodes
+copying /home/hug/tb3_sim_ws/build/turtlebot3_drl_local_planner/build/lib/turtlebot3_drl_local_planner/nodes/drl_controller_node.py -> /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3_drl_local_planner/nodes
+copying /home/hug/tb3_sim_ws/build/turtlebot3_drl_local_planner/build/lib/turtlebot3_drl_local_planner/nodes/__init__.py -> /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3_drl_local_planner/nodes
+creating /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3_drl_local_planner/utils
+copying /home/hug/tb3_sim_ws/build/turtlebot3_drl_local_planner/build/lib/turtlebot3_drl_local_planner/utils/ros_gazebo.py -> /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3_drl_local_planner/utils
+copying /home/hug/tb3_sim_ws/build/turtlebot3_drl_local_planner/build/lib/turtlebot3_drl_local_planner/utils/scan_features.py -> /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3_drl_local_planner/utils
+copying /home/hug/tb3_sim_ws/build/turtlebot3_drl_local_planner/build/lib/turtlebot3_drl_local_planner/utils/geometry.py -> /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3_drl_local_planner/utils
+copying /home/hug/tb3_sim_ws/build/turtlebot3_drl_local_planner/build/lib/turtlebot3_drl_local_planner/utils/__init__.py -> /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3_drl_local_planner/utils
+copying /home/hug/tb3_sim_ws/build/turtlebot3_drl_local_planner/build/lib/turtlebot3_drl_local_planner/eval_shadow_compare.py -> /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3_drl_local_planner
+copying /home/hug/tb3_sim_ws/build/turtlebot3_drl_local_planner/build/lib/turtlebot3_drl_local_planner/train_gap_sac.py -> /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3_drl_local_planner
+copying /home/hug/tb3_sim_ws/build/turtlebot3_drl_local_planner/build/lib/turtlebot3_drl_local_planner/eval_policy.py -> /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3_drl_local_planner
+copying /home/hug/tb3_sim_ws/build/turtlebot3_drl_local_planner/build/lib/turtlebot3_drl_local_planner/export_policy.py -> /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3_drl_local_planner
+byte-compiling /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3_drl_local_planner/agents/prioritized_replay.py to prioritized_replay.cpython-310.pyc
+byte-compiling /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3_drl_local_planner/agents/networks.py to networks.cpython-310.pyc
+byte-compiling /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3_drl_local_planner/agents/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3_drl_local_planner/agents/gap_sac.py to gap_sac.cpython-310.pyc
+byte-compiling /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3_drl_local_planner/envs/gazebo_nav_env.py to gazebo_nav_env.cpython-310.pyc
+byte-compiling /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3_drl_local_planner/envs/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3_drl_local_planner/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3_drl_local_planner/nodes/drl_controller_node.py to drl_controller_node.cpython-310.pyc
+byte-compiling /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3_drl_local_planner/nodes/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3_drl_local_planner/utils/ros_gazebo.py to ros_gazebo.cpython-310.pyc
+byte-compiling /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3_drl_local_planner/utils/scan_features.py to scan_features.cpython-310.pyc
+byte-compiling /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3_drl_local_planner/utils/geometry.py to geometry.cpython-310.pyc
+byte-compiling /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3_drl_local_planner/utils/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3_drl_local_planner/eval_shadow_compare.py to eval_shadow_compare.cpython-310.pyc
+byte-compiling /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3_drl_local_planner/train_gap_sac.py to train_gap_sac.cpython-310.pyc
+byte-compiling /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3_drl_local_planner/eval_policy.py to eval_policy.cpython-310.pyc
+byte-compiling /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3_drl_local_planner/export_policy.py to export_policy.cpython-310.pyc
+running install_data
+copying resource/turtlebot3_drl_local_planner -> /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/share/ament_index/resource_index/packages
+copying package.xml -> /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/share/turtlebot3_drl_local_planner
+copying README.md -> /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/share/turtlebot3_drl_local_planner
+copying config/gap_sac.yaml -> /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/share/turtlebot3_drl_local_planner/config
+copying launch/drl_nav2_replacement.launch.py -> /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/share/turtlebot3_drl_local_planner/launch
+copying launch/drl_controller.launch.py -> /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/share/turtlebot3_drl_local_planner/launch
+copying launch/train_gap_sac.launch.py -> /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/share/turtlebot3_drl_local_planner/launch
+copying launch/eval_gap_sac.launch.py -> /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/share/turtlebot3_drl_local_planner/launch
+running install_egg_info
+Copying ../../build/turtlebot3_drl_local_planner/turtlebot3_drl_local_planner.egg-info to /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/python3.10/site-packages/turtlebot3_drl_local_planner-0.1.0-py3.10.egg-info
+running install_scripts
+Installing drl_controller_node script to /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/turtlebot3_drl_local_planner
+Installing eval_policy script to /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/turtlebot3_drl_local_planner
+Installing eval_shadow_compare script to /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/turtlebot3_drl_local_planner
+Installing export_policy script to /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/turtlebot3_drl_local_planner
+Installing train_gap_sac script to /home/hug/tb3_sim_ws/install/turtlebot3_drl_local_planner/lib/turtlebot3_drl_local_planner
+writing list of installed files to '/home/hug/tb3_sim_ws/build/turtlebot3_drl_local_planner/install.log'
